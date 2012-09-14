@@ -1,0 +1,32 @@
+html {
+  background: #454545;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  width: 784px;
+  padding: 40px;
+  margin: 30px auto 0;
+  border: 2px solid #000;
+  font: 12px/1.4 Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+  padding: 40px 40px 0;
+  margin: -40px -40px 1em;
+  border-top: 5px solid #de1920;
+}
+
+ul {
+  list-style-type: square;
+}
+
+/*** =Links */
+:link { color: #a40106; text-decoration: none; }
+:visited { color: #ab3c3f; text-decoration: none; }
+:link:hover, :visited:hover,
+:link:focus, :visited:focus, 
+:link:active, :visited:active { color: #a40106; text-decoration: underline; }

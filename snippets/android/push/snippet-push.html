@@ -1,0 +1,344 @@
+<div class="snippet tiny-android">
+<div class="icon-hover-wrapper">
+<p>Fast. Smart. Safe. <a href="https://www.mozilla.org/firefox/sms/">Put Firefox on your Android phone</a>.</p>
+
+<div class="icon">
+<div class="android tiny">
+  <div class="body"></div>
+  <div class="head"><div class="eyes-overflow-wrapper"><div class="eyes"><div class="eye left"></div><div class="eye right"></div></div></div></div>
+  <div class="rotating-container">
+    <div class="antenna left"></div><div class="antenna right"></div>
+    <div class="arm-wrapper left"><div class="arm left"></div></div>
+    <div class="arm-wrapper right"><div class="arm right"></div></div>
+    <div class="leg-wrapper left"><div class="leg left"></div></div>
+    <div class="leg-wrapper right"><div class="leg right"></div></div>
+  </div>
+</div>
+<div class="smoke one"><i class="one"></i><i class="two"></i><i class="three"></i><i class="four"></i><i class="five"></i><i class="six"></i></div>
+<div class="smoke two"><i class="one"></i><i class="two"></i><i class="three"></i><i class="four"></i><i class="five"></i><i class="six"></i></div>
+<div class="smoke three"><i class="one"></i><i class="two"></i><i class="three"></i><i class="four"></i><i class="five"></i><i class="six"></i></div>
+</div>
+</div>
+
+<div id="main-phone-container" style="display:none;">
+  <div class="outer-phone-container"><div class="phone-top"></div><div class="phone-bottom"></div></div>
+  <div class="inner-phone-container"><div class="phone-top"></div><div class="speaker-slot"></div><div class="camera-lens"></div><div class="status-bar"></div><div class="inner-screen"></div><div class="phone-bottom"></div></div>
+</div>
+
+<div id="android-large-wrapper" style="display:none;">
+  <div class="android large">
+    <div class="body"></div>
+    <div class="head"><div class="eyes-overflow-wrapper"><div class="eyes"><div class="eye left"></div><div class="eye right"></div></div></div></div>
+    <div class="rotating-container">
+      <div class="antenna left"></div><div class="antenna right"></div>
+      <div class="arm-wrapper left"><div class="arm left"></div></div>
+      <div class="arm-wrapper right"><div class="arm right"></div></div>
+      <div class="leg-wrapper left"><div class="leg left"></div></div>
+      <div class="leg-wrapper right"><div class="leg right"></div></div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+body{ overflow: hidden; }
+.snippet.tiny-android { position: relative; }
+.snippet .icon { position: absolute; right: 400px; top: 5px; }
+.snippet p { display: table-cell; height: 40px; padding-left: 80px; vertical-align: middle; width: 400px; }
+.snippet.tiny-android .icon { top: 0; width: 40px; height: 40px; }
+#searchBarWrapper { -moz-transform-origin: 0% 50%; -moz-transform: translate3d(0,0,0); }
+#newContentWrapper.run-hero-animation #searchBarWrapper { -moz-animation: shake 540ms ease 1300ms forwards; }
+#brandLogo { -moz-transform-origin: 50% 60%; -moz-transform: translate3d(0,0,0) scale(1); }
+#newContentWrapper.run-hero-animation #brandLogo { -moz-animation: shrink-logo 1300ms ease-in 4000ms forwards; }
+#android-large-wrapper { position: absolute; top: -1134px; left: 310px; width: 264px; height: 336px; -moz-transform-style: preserve-3d; -moz-perspective: 800px; -moz-transform-origin: 0% 0%; -moz-transform: translate3d(0,0,0) scale(.41); }
+#newContentWrapper.run-hero-animation #android-large-wrapper { -moz-animation: drop-hero 12000ms ease-in-out 600ms forwards; }
+.android { position: absolute; top: 0; width: 264px; height: 336px; -moz-transform-style: preserve-3d; }
+.android.tiny { -moz-transform-origin: 0% 0%; -moz-transform: translate3d(0,0,0) scale(.134); }
+.icon.blow-up .android.tiny { -moz-animation: blow-up-android 10000ms ease 0ms forwards; }
+.android .rotating-container { position: absolute; width: 264px; height: 336px; -moz-transform-style: preserve-3d; -moz-transform: translate3d(0,0,0); }
+.android.large.spin .rotating-container { -moz-animation: spin 6400ms linear 2400ms forwards; }
+.android .body { position: absolute; top: 110px; left: 48px; width: 168px; height: 152px; border-radius: 0 0 30px 30px; background-color: #96c03c; }
+.android .head { position: absolute; top: 30px; left: 48px; width: 168px; height: 68px; border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; background-color: #96c03c; }
+.android .eyes-overflow-wrapper { position: absolute; top: 25px; left: 8px; width: 152px; height: 20px; overflow: hidden; }
+.android .eyes { position: absolute; width: 152px; height: 20px; -moz-transform: translate3d(0,0,0); }
+.android.large.spin .eyes { -moz-animation: slide-eyes 6400ms linear 2400ms forwards; }
+.android .eye { position: absolute; width: 20px; height: 20px; border-radius: 10px; background-color: white; -moz-transform: translate3d(0,0,0); -moz-animation: eye-animation 4s ease 1s both infinite; }
+.android .eye.left { left: 30px; }
+.android .eye.right { right: 30px; }
+.android .antenna { position: absolute; top: 8px; width: 6px; height: 32px; border-radius: 15px 15px 0 0; -moz-transform-origin: 50% 100%; background-color: #96c03c; }
+.android.tiny .antenna { width: 8px; }
+.android .antenna.left { left: 104px; -moz-transform: translate3d(0,0,0) rotateZ(-32deg); }
+.android.large .antenna.left { -moz-animation: antenna-animation-left 1s ease-in-out 0ms alternate infinite;  }
+.android.large.spin .antenna.left { -moz-animation: reverse-spin-left-antenna 6400ms linear 2400ms forwards; }
+.android .antenna.right { right: 104px; -moz-transform: translate3d(0,0,0) rotateZ(32deg); }
+.android.large .antenna.right { -moz-animation: antenna-animation-right 1s ease-in-out 0s alternate infinite;  }
+.android.large.spin .antenna.right { -moz-animation: reverse-spin-right-antenna 6400ms linear 2400ms forwards; }
+.android .arm-wrapper { position: absolute; top: 110px; width: 36px; height: 114px; -moz-transform-origin: 50% 16%; -moz-transform-style: preserve-3d; -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+.android .arm-wrapper.left { left: 0; }
+#newContentWrapper.run-hero-animation .android.large .arm-wrapper.left { -moz-animation: left-arm-large 8s ease-in 0ms forwards; }
+.android .arm-wrapper.right { left: 228px; }
+#newContentWrapper.run-hero-animation .android.large .arm-wrapper.right { -moz-animation: right-arm-large 8s ease-in 0ms forwards; }
+.android .arm { position: absolute; width: 36px; height: 114px; border-radius: 18px; background-color: #96c03c; -moz-transform-origin: 50% 16%; -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+.android.tiny .arm.left { -moz-animation: arm-animation-left 8s ease-in 600ms infinite; }
+.android.large.spin .arm { -moz-animation: reverse-spin 6400ms linear 2400ms forwards; }
+.android .leg-wrapper { position: absolute; top: 250px; width: 36px; height: 72px; -moz-transform-style: preserve-3d; -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+.android .leg-wrapper.left { left: 86px; }
+.android .leg-wrapper.right { right: 86px; }
+.android.large.spin .leg-wrapper { -moz-animation: reverse-spin 6400ms linear 2400ms forwards; }
+.android .leg { position: absolute; width: 36px; height: 72px; border-radius: 0 0 18px 18px; background-color: #96c03c; -moz-transform: translate3d(0,0,0); }
+#newContentWrapper.run-hero-animation .android.large .leg.left { -moz-animation: stepping 10000ms ease-in-out 2200ms forwards; }
+#newContentWrapper.run-hero-animation .android.large .leg.right { -moz-animation: stepping 10000ms ease-in-out 2400ms forwards; }
+div { box-sizing: border-box; }
+#main-phone-container { position: absolute; top: -120px; left: 128px; width: 214px; height: 426px; -moz-transform-origin: 50% 54%; -moz-transform: translate3d(0,0,0) scale(.3); opacity: 0; }
+#newContentWrapper.run-hero-animation #main-phone-container { -moz-animation: phone-animation 1500ms ease-in-out 4000ms forwards; }
+.outer-phone-container { position: absolute; width: 214px; height: 426px; background: rgba(65,65,65,1); border-radius: 40px 40px / 40px 40px; box-shadow: 1px 1px 1px rgba(40, 40, 40, .7); }
+.outer-phone-container .phone-top { position: absolute; top: -6px; left: 13px; width: 188px; height: 20px; background: rgba(65, 65, 65, 1); border-radius: 210px 210px 0 0 / 50px 50px 0 0; }
+.outer-phone-container .phone-bottom { position: absolute; bottom: -6px; left: 13px; width: 188px; height: 20px; background: rgba(65, 65, 65, 1); border-radius: 0 0 210px 210px / 0 0 50px 50px; }
+.inner-phone-container { position: absolute; left: 3px; top: 3px; width: 208px; height: 420px; background: rgba(25, 25, 25, 1); border-radius: 40px 40px / 40px 40px; }
+.inner-phone-container .phone-top { position: absolute; top: -6px; left: 13px; width: 184px; height: 20px; background: rgba(25, 25, 25, 1); border-radius: 210px 210px 0 0 / 50px 50px 0 0; }
+.inner-phone-container .phone-bottom { position: absolute; bottom: -6px; left: 13px; width: 184px; height: 20px; background: rgba(25, 25, 25, 1); border-radius: 0 0 210px 210px / 0 0 50px 50px; }
+.inner-phone-container .speaker-slot { position: absolute; top: 18px; left: 80px; width: 54px; height: 8px; background: rgba(0,0,0,1); border-radius: 10px; border-top: 1px solid rgba(40,40,40,1); border-left: 1px solid rgba(40,40,40,1); border-bottom: 1px solid rgba(0,0,0,1); border-right: 1px solid rgba(0,0,0,1); box-shadow: inset 0 0 3px rgba(50,50,50,1); }
+.inner-phone-container .camera-lens { position: absolute; top: 18px; right: 32px; width: 10px; height: 10px; background: rgba(30, 30, 40, 1); border-radius: 10px; box-shadow: inset 0 0 5px rgba(60, 60, 60, 1); }
+.inner-phone-container .status-bar { position: absolute; top: 54px; left: 11px; height: 12px; width: 188px; background: rgba(5,5,5,1); }
+.inner-phone-container .inner-screen { position: absolute; top: 66px; left: 11px; width: 188px; height: 298px; background-image: -moz-linear-gradient(top, #96C3DC 0%, #96C3DC 100%); box-shadow: inset 0 0 3px rgba(50,50,50,1); }
+.smoke { position: absolute; top: 0; left: 0; width: 40px;  height: 40px; color: rgb(200,200,200); font-weight: 600; font-size: 80px; text-indent: -9999px; }
+.smoke.two { top: -145px; left: -8px; -moz-transform: translate3d(0,0,0) scale(0); }
+.smoke i { position: absolute; font-style: normal; }
+.smoke i:after { content: "."; }
+.icon.blow-up .smoke.one i { -moz-animation-name: smoke; }
+.icon.blow-up .smoke.two { -moz-transform: scale(2.4); }
+.icon.blow-up .smoke.two i { -moz-animation-name: smoke; -moz-animation-delay: 8420ms; }
+.icon.blow-up .smoke.three i { -moz-animation-name: smoke; -moz-animation-delay: 8600ms; }
+.smoke i.one { left: 5px; top: -50px; -moz-animation-duration: 2000ms; }
+.smoke i.two { left: 9px; top: -45px; -moz-animation-duration: 2300ms; }
+.smoke i.three { left: 13px; top: -48px; -moz-animation-duration: 1700ms; }
+.smoke i.four { left: 2px; top: -40px; -moz-animation-duration: 1700ms; }
+.smoke i.five { left: 18px; top: -40px; -moz-animation-duration: 1700ms; }
+.smoke i.six { left: 8px; top: -34px; -moz-animation-duration: 2000ms; }
+@-moz-keyframes eye-animation {
+  0% { -moz-transform: scaleY(1); }
+  5% { -moz-transform: scaleY(0); }
+  10% { -moz-transform: scaleY(1); }
+  100% { -moz-transform: scaleY(1); }
+}
+
+@-moz-keyframes arm-animation-left {
+  0% { -moz-transform: translate3d(0,0,0) rotate(0deg); }
+  4% { -moz-transform: translate3d(0,0,0) rotate(156deg); }
+  6.5% { -moz-transform: translate3d(0,0,0) rotate(136deg); }
+  8% { -moz-transform: translate3d(0,0,0) rotate(156deg); }
+  9% { -moz-transform: translate3d(0,0,0) rotate(136deg); }
+  11% { -moz-transform: translate3d(0,0,0) rotate(40deg); }
+  12% { -moz-transform: translate3d(0,0,0) rotate(0deg); }
+  100% { -moz-transform: translate3d(0,0,0) rotate(0deg); }
+}
+@-moz-keyframes left-leg-animation {
+  0%{ -moz-transform: translate3d(0,0,0) scaleY(1); }
+  100%{ -moz-transform: translate3d(0,0,0) scaleY(.5); }
+}
+@-moz-keyframes blow-up-android {
+  0%{ opacity: 1; }
+  0.4%{ opacity: 0; }
+  86.4%{ opacity: 0; }
+  86.5%{ opacity: 1; }
+  100%{ opacity: 1; }
+}
+@-moz-keyframes smoke {
+  0% { text-shadow: 9999px 0 0 rgba(153, 153, 153, 1); }
+  90% { text-shadow: 9999px -40px 20px rgba(153, 153, 153, 0); }
+  100% { text-shadow: 9999px 0 0 rgba(0, 0, 0, 0); }
+}
+@-moz-keyframes drop-hero {
+  0%{ -moz-transform: translate3d(0,0,0) scale(.41); opacity: 0; }
+  1.875%{ -moz-transform: translate3d(0,300px,0) scale(.41); opacity: 1; }
+  6.25%{ -moz-transform: translate3d(0,1000px,0) scale(.41); opacity: 1; }
+  14%{ -moz-transform: translate3d(0,1000px,0) scale(.41); opacity: 1; }
+  25%{ -moz-transform: translate3d(-128px,1000px,0) scale(.41); opacity: 1; }
+  44%{ -moz-transform: translate3d(-128px,1000px,0) scale(.41); opacity: 1; }
+  44%{ -moz-transform: translate3d(-128px,1000px,0) scale(.41); opacity: 1; }
+  60%{ -moz-transform: translate3d(-320px,1000px,0) scale(.41); opacity: 1; }
+  65%{ -moz-transform: translate3d(-320px,1000px,0) scale(.41); opacity: 1; }
+  65.2%{ -moz-transform: translate3d(-320px,1000px,0) scale(.41); opacity: 0; }
+  100%{ -moz-transform: translate3d(-320px,1000px,0) scale(.41); opacity: 0; }
+}
+@-moz-keyframes shake {
+  0%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  20%{ -moz-transform: translate3d(0,6px,0) rotateZ(1.2deg); }
+  54%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  70%{ -moz-transform: translate3d(0,1px,0) rotateZ(.2deg); }
+  80%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  100%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+}
+@-moz-keyframes antenna-animation-left {
+  0% { -moz-transform: translate3d(0,0,0) rotate(-32deg); }
+  10% { -moz-transform: translate3d(0,0,0) rotate(-22deg); }
+  20% { -moz-transform: translate3d(0,0,0) rotate(-32deg); }
+  100% { -moz-transform: translate3d(0,0,0) rotate(-32deg); }
+}
+@-moz-keyframes antenna-animation-right {
+  0% { -moz-transform: translate3d(0,0,0) rotate(32deg); }
+  10% { -moz-transform: translate3d(0,0,0) rotate(22deg); }
+  20% { -moz-transform: translate3d(0,0,0) rotate(32deg); }
+  100% { -moz-transform: translate3d(0,0,0) rotate(32deg); }
+}
+@-moz-keyframes spin {
+  0%{ -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+  19%{ -moz-transform: translate3d(0,0,0) rotateY(-180deg); }
+  54%{ -moz-transform: translate3d(0,0,0) rotateY(-180deg); }
+  76%{ -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+  100%{ -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+}
+@-moz-keyframes reverse-spin {
+  0%{ -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+  19%{ -moz-transform: translate3d(0,0,0) rotateY(180deg); }
+  54%{ -moz-transform: translate3d(0,0,0) rotateY(180deg); }
+  76%{ -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+  100%{ -moz-transform: translate3d(0,0,0) rotateY(0deg); }
+}
+@-moz-keyframes reverse-spin-left-antenna {
+  0%{ -moz-transform: translate3d(0,0,0) rotateZ(-32deg) rotateY(0deg); }
+  19%{ -moz-transform: translate3d(0,0,0) rotateZ(-32deg) rotateY(180deg); }
+  54%{ -moz-transform: translate3d(0,0,0) rotateZ(-32deg) rotateY(180deg); }
+  76%{ -moz-transform: translate3d(0,0,0) rotateZ(-32deg) rotateY(0deg); }
+  100%{ -moz-transform: translate3d(0,0,0) rotateZ(-32deg) rotateY(0deg); }
+}
+@-moz-keyframes reverse-spin-right-antenna {
+  0%{ -moz-transform: translate3d(0,0,0) rotateZ(32deg) rotateY(0deg); }
+  19%{ -moz-transform: translate3d(0,0,0) rotateZ(32deg) rotateY(180deg); }
+  54%{ -moz-transform: translate3d(0,0,0) rotateZ(32deg) rotateY(180deg); }
+  76%{ -moz-transform: translate3d(0,0,0) rotateZ(32deg) rotateY(0deg); }
+  100%{ -moz-transform: translate3d(0,0,0) rotateZ(32deg) rotateY(0deg); }
+}
+@-moz-keyframes slide-eyes {
+  0%{ -moz-transform: translate3d(0,0,0); }
+  19%{ -moz-transform: translate3d(-280px,0,0); }
+  54%{ -moz-transform: translate3d(-280px,0,0); }
+  74%{ -moz-transform: translate3d(0,0,0); }
+  100%{ -moz-transform: translate3d(0,0,0); }
+}
+@-moz-keyframes left-arm-large {
+  0%{ -moz-transform: translate3d(0,0,0) rotateZ(170deg); }
+  13%{ -moz-transform: translate3d(0,0,0) rotateZ(170deg); }
+  17.2%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  46%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  50%{ -moz-transform: translate3d(0,0,0) rotateZ(140deg); }
+  66%{ -moz-transform: translate3d(0,0,0) rotateZ(220deg); }
+  70%{ -moz-transform: translate3d(0,0,0) rotateZ(220deg); }
+  75%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  100%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+}
+@-moz-keyframes right-arm-large {
+  0%{ -moz-transform: translate3d(0,0,0) rotateZ(-170deg); }
+  13%{ -moz-transform: translate3d(0,0,0) rotateZ(-170deg); }
+  17.2%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  46%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  50%{ -moz-transform: translate3d(0,0,0) rotateZ(-140deg); }
+  66%{ -moz-transform: translate3d(0,0,0) rotateZ(-220deg); }
+  70%{ -moz-transform: translate3d(0,0,0) rotateZ(-220deg); }
+  75%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  100%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+}
+@-moz-keyframes shrink-logo {
+  0%{ -moz-transform: translate3d(0,0,0) scale(1); }
+  100%{ -moz-transform: translate3d(0,0,0) scale(.45); }
+}
+@-moz-keyframes phone-animation {
+  0%{ -moz-transform: translate3d(0,0,0) scale(.3); opacity: 1; }
+  100%{ -moz-transform: translate3d(0,0,0) scale(.46); opacity: 1; }
+}
+@-moz-keyframes stepping {
+  0%{ -moz-transform: translate3d(0,0,0); }
+  2%{ -moz-transform: translate3d(0,-10px,0); }
+  4%{ -moz-transform: translate3d(0,0,0); }
+  6%{ -moz-transform: translate3d(0,-10px,0); }
+  8%{ -moz-transform: translate3d(0,0,0); }
+  10%{ -moz-transform: translate3d(0,-10px,0); }
+  12%{ -moz-transform: translate3d(0,0,0); }
+  37%{ -moz-transform: translate3d(0,0,0); }
+  39%{ -moz-transform: translate3d(0,-10px,0); }
+  41%{ -moz-transform: translate3d(0,0,0); }
+  43%{ -moz-transform: translate3d(0,-10px,0); }
+  45%{ -moz-transform: translate3d(0,0,0); }
+  47%{ -moz-transform: translate3d(0,-10px,0); }
+  49%{ -moz-transform: translate3d(0,0,0); }
+  51%{ -moz-transform: translate3d(0,-10px,0); }
+  53%{ -moz-transform: translate3d(0,0,0); }
+  100%{ -moz-transform: translate3d(0,0,0); }
+}
+</style>
+
+<script type="text/javascript">
+  //<![CDATA[
+  function wrapInitialPageContent(){
+    var topSection = document.querySelector("#topSection");
+    topSection.style.position = "relative";
+
+    var searchContainer = document.querySelector("#searchContainer");
+    var form = searchContainer.querySelector("form");
+    var formWidth = form.offsetWidth;
+    var formHeight = form.offsetHeight;
+    var formOffsetTop = form.offsetTop;
+    var searchBarWrapper = document.createElement("div");
+    searchBarWrapper.setAttribute("style","position: absolute; bottom: 0; left: 0; width: "+formWidth+"px; height: "+formHeight+"px;");
+    searchBarWrapper.id = "searchBarWrapper";
+    searchBarWrapper.appendChild(searchContainer);
+
+    var brandLogo = document.querySelector("#brandLogo");
+    var brandLogoOffsetTop = brandLogo.offsetTop;
+    brandLogo.style.position = "absolute";
+    brandLogo.style.top = brandLogoOffsetTop+"px";
+    brandLogo.style.left = Math.floor((formWidth - brandLogo.width) / 2)+"px";
+    brandLogo.style.marginTop = "0";
+    brandLogo.style.marginBottom = "0";
+    brandLogo.className += " brand-logo-override";
+
+    var newContentWrapper = document.createElement("div");
+    newContentWrapper.id = "newContentWrapper";
+    newContentWrapper.setAttribute("style","position: relative; width: "+formWidth+"px; height: "+(formOffsetTop+formHeight)+"px; margin-left: auto; margin-right: auto;");
+    brandLogo.parentNode.insertBefore(newContentWrapper, brandLogo);
+    newContentWrapper.appendChild(brandLogo);
+    newContentWrapper.appendChild(searchBarWrapper);
+    document.querySelector("#searchText").focus();
+  }
+
+  function injectPhone(){
+    var brandLogo = document.querySelector("#brandLogo");
+    var phone = document.querySelector("#main-phone-container");
+    brandLogo.parentNode.insertBefore(phone, brandLogo);
+    phone.style.display = "block";
+  }
+  function injectLargeAndroid(){
+    var largeAndroid = document.querySelector("#android-large-wrapper");
+    var searchBarWrapper = document.querySelector("#searchBarWrapper");
+    searchBarWrapper.appendChild(largeAndroid);
+    largeAndroid.style.display = "block";
+  }
+  function blowUpTinyAndroid(){
+    var tinyAndroid = document.querySelector(".android.tiny");
+    tinyAndroid.parentNode.className += " blow-up";
+    var newContentWrapper = document.querySelector("#newContentWrapper");
+    newContentWrapper.className += " run-hero-animation";
+    var largeAndroid = document.querySelector(".android.large");
+    largeAndroid.className += " spin";
+  }
+  function injectLargeSmokeBomb(){
+    var smokeBomb = document.querySelector(".smoke.two");
+    var searchBarWrapper = document.querySelector("#searchBarWrapper");
+    searchBarWrapper.appendChild(smokeBomb);
+  }
+  wrapInitialPageContent();
+  window.tinyAndroidMouseoverEventHasBeenFired = false;
+  setTimeout(function(){
+    injectPhone();
+    injectLargeAndroid();
+    var iconHoverWrapper = document.querySelector(".icon-hover-wrapper");
+    iconHoverWrapper.addEventListener("mouseover", function(e){
+      if(!tinyAndroidMouseoverEventHasBeenFired){
+        tinyAndroidMouseoverEventHasBeenFired = true;
+        blowUpTinyAndroid();
+      }
+    }, false);
+  }, 0);
+  //]]>
+</script>
+
+</div>

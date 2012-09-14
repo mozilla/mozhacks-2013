@@ -1,0 +1,329 @@
+<div class="snippet tiny-android">
+<p style="z-index:800;">Fast. Smart. Safe. <a href="https://www.mozilla.org/firefox/sms/">It's never been easier to put Firefox on your Android phone</a>.</p>
+<img class="icon" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAsCAMAAADYUfG+AAAAYFBMVEV6enuenp5kZWUtLi5WWVpKSkpFS0NKS0p2dXbGxsa9vb3Jycmfn596enrFxcUAAAC71+Lj7suv0G3G3Z31+vUvMzYdISKWwDxcqdGUxN02VmdIgJ0DBASgxk1Tm8B1l1gD2zrMAAAAEHRSTlOG2cXa+5j6X/2ixk0tE30Ai5C9EwAAAc9JREFUeF6F0ouO4jAMBVCgacJCzOT56Av+/y/XzoSNhzLLlZCKcuRbtz18fc4bA+pwgA9GnDEK/mfGc82pq53R51lUJEb9i4GzuC+ohIhSqvfmJO73UhYphIwxjvDGaLEUQvdZyrSu66B2BsSMhFBZkGCSejWnWNA0FNca9dOoSE0NYV81A3ADcm6kj3o1ojZxVObEuniTmTqKAzAD8dlkfbug7TTfa4h3MiYE601pJo38+ai0TMYUBNvmbJgqmSMwA2meXLbB5uzx54IxEzYp/i6GVDwdBZ+dz4iss9TUDTUZPLHOBeuQYF8w2MQMRGrK3uOpDx6vwhZop2Z602a3jMFROCYbbGKGdqpNRMjSKDF8dUM7FeOoidJGPZLmhp5eMbh2z+YjNnWjEpIyBZdZ5ADMQFoXNMZyQk3MjPRFLjhnYwZ34mZYKXMJ/qWJmfbZRiTbxpt4V0PpkX1w30Qh4AYI1UgTtt7EDaHU+h45O8+a+LsgVCNz6O+JGULyH1pSb+KG963U9N6Akk2N16vWGuCnAX293m63k0yo5O07KKGbKv5gjmcZxfFyudCfqp4GdCUXypFETUUadnPaMZuzux+eKuB1L61Rtuz2+py/bxxo6KwtoiIAAAAASUVORK5CYII="/>
+
+<div class="smoke-container"><i class="smoke one">.</i><i class="smoke two">.</i><i class="smoke three">.</i><i class="smoke four">.</i><i class="smoke five">.</i><i class="smoke six">.</i></div>
+<div class="smoke-container-two"><i class="smoke one">.</i><i class="smoke two">.</i><i class="smoke three">.</i><i class="smoke four">.</i><i class="smoke five">.</i><i class="smoke six">.</i></div>
+
+<div class="curtain" style="display: none;">
+  <div id="android-container">
+    <div id="android-large-wrapper">
+      <div class="android large">
+        <div class="body"></div>
+        <div id="head"><div id="eyes-overflow-wrapper"><div class="eyes"><div class="eye left"></div><div class="eye right"></div></div></div></div>
+        <div class="rotating-container"><div class="antenna left"></div><div class="antenna right"></div></div>
+        <div class="arm left"></div><div class="arm right"></div>
+        <div class="leg left"></div><div class="leg right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="container">
+  <div id="main-phone-container">
+    <div class="outer-phone-container"><div class="phone-top"></div><div class="phone-bottom"></div></div>
+    <div class="inner-phone-container"><div class="phone-top"></div><div class="speaker-slot"></div><div class="camera-lens"></div><div class="status-bar"></div><div class="inner-screen"></div><div class="phone-bottom"></div></div>
+  </div>
+</div>
+
+<style type="text/css">
+body { overflow: hidden; }
+.snippet { position: relative; }
+.snippet p { display: table-cell; height: 40px; padding-left: 80px; vertical-align: middle; width: 400px; }
+#brandLogo { z-index: 10; }
+#brandLogo.shrink { -moz-animation: shrink-logo 1000ms ease-in-out 500ms forwards 1; } 
+#container { position: absolute; top: 0; left: 0; z-index: 5; width: 208px; height: 420px; -moz-transform-style: preserve-3d; -moz-transform: translate3d(0,-3000px,0) scale(.47) rotateX(0deg); -moz-perspective: 800px; }
+#container.phone-phone-home { -moz-animation: phone-phone-home 800ms linear 0ms forwards 1; }
+#main-phone-container { position: absolute; top: 0; left: 0; width: 208px; height: 420px; }
+.outer-phone-container { position: absolute; width: 214px; height: 426px; background: rgb(65,65,65); border-radius: 40px 40px / 40px 40px; }
+.outer-phone-container .phone-top { position: absolute; top: -6px; left: 13px; width: 188px; height: 20px; background: rgb(65,65,65); border-radius: 210px 210px 0 0 / 50px 50px 0 0; }
+.outer-phone-container .phone-bottom { position: absolute; bottom: -6px; left: 13px; width: 188px; height: 20px; background: rgb(65,65,65); border-radius: 0 0 210px 210px / 0 0 50px 50px; }
+.inner-phone-container { position: absolute; left: 3px; top: 3px; width: 208px; height: 420px; background: rgb(25, 25, 25); border-radius: 40px 40px / 40px 40px; box-shadow: inset 0 4px 4px rgba(255, 255, 255, .6); }
+.inner-phone-container .phone-top { position: absolute; top: -6px; left: 13px; width: 184px; height: 20px; background: rgb(25, 25, 25); border-radius: 210px 210px 0 0 / 50px 50px 0 0; box-shadow: inset 0px 4px 2px rgba(255, 255, 255, .6); }
+.inner-phone-container .phone-bottom { position: absolute; bottom: -6px; left: 13px; width: 184px; height: 20px; background: rgb(25, 25, 25); border-radius: 0 0 210px 210px / 0 0 50px 50px; }
+.inner-phone-container .speaker-slot { position: absolute; top: 18px; left: 80px; width: 54px; height: 8px; background: rgb(0,0,0); border-radius: 10px; border: 1px solid; border-color: #282828 #000 #000 #282828; box-shadow: inset 0 -2px 1px rgba(255,255,255,.5); }
+.inner-phone-container .camera-lens { position: absolute; top: 19px; right: 32px; width: 10px; height: 10px; background: rgb(30, 30, 40); border-radius: 10px; box-shadow: inset 0 -2px 3px rgba(255, 255, 255, .1); }
+.inner-phone-container .status-bar {position: absolute; top: 54px; left: 11px; height: 12px; width: 188px; background: rgb(5,5,5); }
+.inner-phone-container .inner-screen { position: absolute; top: 66px; left: 11px; width: 188px; height: 298px; background-color: #96C3DC; box-shadow: inset 0 0 3px rgb(50,50,50); }
+.snippet.tiny-android .icon { position: absolute; right: 400px; top: 5px; height: auto; width: auto; }
+#searchBarWrapper { -moz-transform-origin: 0% 50%; -moz-transform: translate3d(0,0,0); z-index: 800; }
+#searchContainer, #searchForm, #searchLogoContainer, #searchText, #searchSubmit {  z-index: 800; }
+#newContentWrapper #searchBarWrapper.shake { -moz-animation: shake 540ms ease 0ms forwards; }
+#android-container { position: absolute; bottom: -78px; right: -128px; width: 264px; height: 0; -moz-transform-style: preserve-3d; -moz-perspective: 800px; -moz-transform-origin: 0 0; -moz-transform: translate3d(-44px,-24px,0) scale(.26); pointer-events: auto; }
+#android-container.step-2 { -moz-transform: translate3d(0px,-207px,0) scale(.3); -moz-animation: container-to-phone 1s linear 0ms forwards 1; }
+.curtain { position: absolute; bottom: 34px; right: 0; height: 3000px; width: 3000px; pointer-events: none; overflow: hidden; background-color: transparent; }
+#android-large-wrapper { position: absolute; bottom: 20px; left: 20px; width: 264px; height: 336px; -moz-transform-style: preserve-3d; -moz-transform-origin: 0 0; -moz-transform: translate3d(0,0,0); pointer-events: auto; }
+#newContentWrapper #android-large-wrapper.step-1 { -moz-animation: move-droid 30s ease-in-out 600ms forwards infinite; }
+#newContentWrapper #android-large-wrapper.begin-animation { -moz-animation: begin-animation 1s ease 0ms forwards 1; }
+#newContentWrapper #android-large-wrapper.step-2 { -moz-transform: translate3d(50px,-207px,0); -moz-animation: to-phone 1s linear 0ms forwards 1; }
+#newContentWrapper #android-large-wrapper.droid-phone-home { -moz-transform: translate3d(-380px,-3000px,0); -moz-animation: droid-phone-home 800ms linear 0ms forwards 1; }
+#newContentWrapper #android-large-wrapper.droid-move-behind-phone { -moz-transform: translate3d(-130px,-200px,0); -moz-animation: droid-move-behind-phone 800ms linear 0ms forwards 1; }
+.android { position: absolute; top: 0; z-index: 1; width: 264px; height: 336px; }
+.android .rotating-container { position: absolute; width: 264px; height: 336px; z-index: 1; }
+.android .body { position: absolute; top: 110px; left: 48px; width: 168px; height: 152px; border-radius: 0 0 20px 20px; background-color: #96c03c; z-index: 1; }
+.android #head { position: absolute; top: 30px; left: 48px; background-color: #96c03c; z-index: 1; width: 168px; height: 68px; border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; }
+.android #head.bobble-head { -moz-animation: bobble-head 15s ease 3s forwards infinite; }
+.android #eyes-overflow-wrapper { position: absolute; top: 25px; left: 8px; width: 152px; height: 20px; overflow: hidden; z-index: 1; }
+.android #eyes-overflow-wrapper.look-at-logo { -moz-animation: look-at-logo 600ms ease 0ms forwards 1; }
+.android .eyes { position: absolute; width: 152px; height: 20px; z-index: 1; -moz-animation: eye-animation 3500ms ease 1s both infinite; }
+.android .eye { position: absolute; width: 20px; height: 20px; border-radius: 10px; background-color: white; z-index: 1; }
+.android .eye.left { left: 30px; }
+.android .eye.right { right: 30px; }
+.android .antenna { position: absolute; top: 8px; width: 6px; height: 32px; border-radius: 15px 15px 0 0; background-color: #96c03c; z-index: 1; }
+.android .antenna.left { left: 104px; -moz-transform: rotateZ(-32deg); }
+.android .antenna.right { right: 104px; -moz-transform: rotateZ(32deg); }
+.android .arm { position: absolute; top: 110px; width: 36px; height: 114px; border-radius: 18px; background-color: #96c03c; -moz-transform-origin: 50% 16%; z-index: 1; }
+.android .arm.left { left: 0; }
+.android .arm.left.flight { -moz-transform: rotate(-200deg); }
+.android .arm.left.wave { -moz-animation: wave-left 3s ease-in-out 400ms forwards 1; }
+.android .arm.right { left: 228px; }
+.android .arm.right.flight { -moz-transform: rotate(200deg); }
+.android .arm.right.flight.land { -moz-animation: landing-arms 600ms ease-in-out 400ms forwards 1; }
+.android .leg { position: absolute; top: 250px; width: 36px; height: 72px; border-radius: 0 0 18px 18px; background-color: #96c03c; z-index: 1; }
+.android .leg.left { left: 86px; }
+.android .leg.left.step { -moz-animation: stepping 790ms ease-in-out 100ms forwards 1; }
+.android .leg.right { right: 84px; }
+.android .leg.right.step { -moz-animation: stepping 790ms ease-in-out 0ms forwards 1; }
+.smoke-container { display: none; position: absolute; top: -80px; left: 316px; width: 40px; height: 40px; color: rgb(200, 200, 200); font-weight: 600; font-size: 80px; text-indent: -9999px; }
+.smoke-container-two { display: none; position: absolute; top: -80px; left: 335px; width: 40px; height: 40px; color: rgb(200, 200, 200); font-weight: 600; font-size: 80px; text-indent: -9999px; }
+.smoke-container-two .smoke, .smoke-container .smoke { position: absolute; -moz-animation-name: smoke; }
+.smoke-container-two .smoke.one, .smoke-container .smoke.one { left: 5px; top: -50px; -moz-animation-duration: 3000ms; }
+.smoke-container-two .smoke.two, .smoke-container .smoke.two { left: 9px; top: -45px; -moz-animation-duration: 3300ms; }
+.smoke-container-two .smoke.three, .smoke-container .smoke.three { left: 13px; top: -48px; -moz-animation-duration: 3700ms; }
+.smoke-container-two .smoke.four, .smoke-container .smoke.four { left: 2px; top: -40px; -moz-animation-duration: 3700ms; }
+.smoke-container-two .smoke.five, .smoke-container .smoke.five { left: 18px; top: -40px; -moz-animation-duration: 3700ms; }
+.smoke-container-two .smoke.six, .smoke-container .smoke.six { left: 8px; top: -34px; -moz-animation-duration: 3000ms; }
+@-moz-keyframes stepping {
+  0%{ -moz-transform: translate3d(0,0,0); }
+  25%{ -moz-transform: translate3d(0,-40px,0); }
+  50%{ -moz-transform: translate3d(0,0,0); }
+  75%{ -moz-transform: translate3d(0,-40px,0); }
+  100%{ -moz-transform: translate3d(0,0,0); }
+}
+@-moz-keyframes shrink-logo {
+  0%{ -moz-transform: translate3d(0,0,0) scale(1); }
+  100%{ -moz-transform: translate3d(0,8px,0) scale(.45); }
+}
+@-moz-keyframes landing-arms {
+  0% { -moz-transform: translate3d(0,0,0) rotate(-180deg); }
+  100% { -moz-transform: translate3d(0,0,0) rotate(0deg); }
+}
+@-moz-keyframes wave-left {
+  0% { -moz-transform: rotate(0deg); }
+  15% { -moz-transform: rotate(156deg); }
+  25% { -moz-transform: rotate(136deg); }
+  35% { -moz-transform: rotate(156deg); }
+  45% { -moz-transform: rotate(40deg); }
+  55% { -moz-transform: rotate(30deg); }
+  65% { -moz-transform: rotate(136deg); }
+  75% { -moz-transform: rotate(156deg); }
+  85% { -moz-transform: rotate(136deg); }
+  100% { -moz-transform: rotate(156deg); }
+}
+@-moz-keyframes phone-phone-home {
+  0% { -moz-transform: translate3d(0,-2200px,0) rotateX(0deg) scale(.46); }
+  80% { -moz-transform: translate3d(130px,-367px,0) rotateX(0deg) scale(.46); }
+  90% { -moz-transform: translate3d(130px,-367px,0) rotateX(0deg) scale(.46); }
+  100% { -moz-transform: translate3d(130px,-367px,0) rotateX(0deg) scale(.46); }
+}
+@-moz-keyframes droid-phone-home {
+  0% {  -moz-transform: translate3d(-380px,-4000px,0) rotate(0deg); }
+  85% {  -moz-transform: translate3d(-130px,-280px,0) rotate(0deg); }
+  100% {  -moz-transform: translate3d(-130px,-280px,0) rotate(0deg); }
+}
+@-moz-keyframes droid-move-behind-phone {
+  0% {  -moz-transform: translate3d(-130px,-280px,0) rotate(0deg); }
+  80% {  -moz-transform: translate3d(-530px,-280px,0) rotate(0deg); }
+  100% {  -moz-transform: translate3d(-640px,-250px,0) rotate(-15deg); }
+}
+@-moz-keyframes container-to-phone {
+  0% { -moz-transform: translate3d(-44px,-97px,0) rotate(0deg) scale(.26); }
+  20% { -moz-transform: translate3d(-44px,-208px,0) rotate(0deg) scale(.26); }
+  50% { -moz-transform: translate3d(-180px,-520px,0) rotate(-30deg) scale(.26); }
+  70% { -moz-transform: translate3d(-280px,-728px,0) rotate(-45deg) scale(.26); }
+  100% { -moz-transform: translate3d(-380px,-3000px,0) rotate(-45deg) scale(.26); }
+}
+@-moz-keyframes to-phone {
+  0% { -moz-transform: translate3d(50px,0,0); }
+  20% { -moz-transform: translate3d(50px,0,0); }
+  100% { -moz-transform: translate3d(-900px,0,0); }
+}
+@-moz-keyframes begin-animation {
+  0% { -moz-transform: translate3d(0,0,0);  }
+  40% { -moz-transform: translate3d(50px,-187px,0);  }
+  100% { -moz-transform: translate3d(50px,-187px,0);  }
+}
+@-moz-keyframes move-droid {
+  0% { -moz-transform: translate3d(0,0,0); }
+  15% { -moz-transform: translate3d(-108px,-10px,0); }
+  30% { -moz-transform: translate3d(0,0,0); }
+  35% { -moz-transform: translate3d(40px,5px,0); }
+  55% { -moz-transform: translate3d(8px,3px,0); }
+  57% { -moz-transform: translate3d(-45px,-10px,0); }
+  59% { -moz-transform: translate3d(0px,-12px,0); }
+  64% { -moz-transform: translate3d(55px,-12px,0); }
+  74% { -moz-transform: translate3d(20px,0px,0); }
+  100% { -moz-transform: translate3d(0,0,0); }
+}
+@-moz-keyframes look-at-logo {
+  0% { -moz-transform: translate3d(0,0,0); }
+  100% { -moz-transform: translate3d(-12px,-2px,0); }
+}
+@-moz-keyframes eye-animation {
+  0% { -moz-transform: scaleY(1); }
+  5% { -moz-transform: scaleY(0); }
+  10% { -moz-transform: scaleY(1); }
+  100% { -moz-transform: scaleY(1); }
+}
+@-moz-keyframes smoke {
+  0% { text-shadow: 9999px 0 0 rgba(153, 153, 153, 1); }
+  20% { text-shadow: 9999px -40px 20px rgba(153, 153, 153, 0); }
+  100% { text-shadow: 9999px 0 0 rgba(0, 0, 0, 0); }
+}
+@-moz-keyframes shake {
+  0%{ -moz-transform: translate3d(0,0,0) rotateZ(0deg); }
+  20%{ -moz-transform: translate3d(0,12px,0) rotateZ(1deg); }
+  54%{ -moz-transform: translate3d(0,0px,0) rotateZ(0deg); }
+  70%{ -moz-transform: translate3d(0,3px,0) rotateZ(.2deg); }
+  80%{ -moz-transform: translate3d(0,0px,0) rotateZ(0deg); }
+  100%{ -moz-transform: translate3d(0,0px,0) rotateZ(0deg); }
+}
+</style>
+
+<script type="text/javascript">
+ //<![CDATA[
+  function wrapInitialPageContent(){
+    var topSection = document.querySelector("#topSection");
+    topSection.style.position = "relative";
+    var searchContainer = document.querySelector("#searchContainer");
+    var form = searchContainer.querySelector("form");
+    var formWidth = form.offsetWidth;
+    var formHeight = form.offsetHeight;
+    var formOffsetTop = form.offsetTop;
+    var searchBarWrapper = document.createElement("div");
+    searchBarWrapper.setAttribute("style","position: absolute; bottom: 0px; left: 0px; width: "+formWidth+"px; height: "+formHeight+"px; z-index: 800;");
+    searchBarWrapper.id = "searchBarWrapper";
+    searchBarWrapper.appendChild(searchContainer);
+
+    var brandLogo = document.querySelector("#brandLogo");
+    var brandLogoOffsetTop = brandLogo.offsetTop;
+    brandLogo.style.position = "absolute";
+    brandLogo.style.top = brandLogoOffsetTop+"px";
+    brandLogo.style.left = Math.floor((formWidth - brandLogo.width) / 2)+"px";
+    brandLogo.style.marginTop = "0";
+    brandLogo.style.marginBottom = "0";
+    brandLogo.style.zindex = "500";
+    brandLogo.className += " brand-logo-override";
+
+    var newContentWrapper = document.createElement("div");
+    newContentWrapper.id = "newContentWrapper";
+    newContentWrapper.setAttribute("style","position: relative; width: "+formWidth+"px; height: "+(formOffsetTop+formHeight)+"px; margin-left: auto; margin-right: auto;");
+
+    brandLogo.parentNode.insertBefore(newContentWrapper, brandLogo);
+
+    newContentWrapper.appendChild(brandLogo);
+    newContentWrapper.appendChild(searchBarWrapper);
+
+    document.querySelector("#searchText").focus();
+  }
+
+  function injectLargeAndroid () {
+    var largeAndroid = document.querySelector(".curtain");//"#android-container");
+    var searchBarWrapper = document.querySelector("#newContentWrapper");
+    searchBarWrapper.appendChild(largeAndroid);
+    largeAndroid.style.display = "block";
+  }
+
+  function blowUpTinyAndroid () {
+    var tinyAndroid = document.querySelector(".android.tiny");
+    tinyAndroid.parentNode.className += " blow-up";
+    var newContentWrapper = document.querySelector("#newContentWrapper");
+    newContentWrapper.className += " run-hero-animation";
+  }
+
+  wrapInitialPageContent();
+  this.bottomOfPhoneForDroid = null;
+  window.initialAndroidMouseoverEventHasBeenFired = false;
+
+  setTimeout(function(){
+    injectLargeAndroid();
+
+    var android = document.getElementById("android-large-wrapper");
+    var androidHead = document.querySelector("#head");
+    var androidArms = document.querySelectorAll(".arm");
+    var androidLegs = document.querySelectorAll(".leg");
+    var androidContainer = document.getElementById("android-container");
+    var eyeContainer = document.getElementById("eyes-overflow-wrapper");
+
+    var phone = document.getElementById("container");
+    var phoneContainer = document.getElementById("main-phone-container");
+
+    var smokeOne = document.querySelector(".smoke-container");
+    var smokeTwo = document.querySelector(".smoke-container-two");
+    var brandLogo = document.getElementById("brandLogo");
+
+    var brandLogo = document.getElementById("brandLogo");
+    var curtain = document.querySelector(".curtain");
+    var searchBarWrapper = document.getElementById("searchBarWrapper");
+
+    android.className += " step-1";
+
+    android.addEventListener("animationstart", function(e){
+      if (e.animationName == "droid-move-behind-phone") {
+        setTimeout(function(){
+          androidArms[0].className = " arm left wave";
+        }, 150);
+      }
+    }, false);
+
+    android.addEventListener("animationend", function(e){
+      if (e.animationName == "begin-animation") {
+        eyeContainer.className += "look-at-logo";
+      }
+
+      if (e.animationName == "look-at-logo") {
+        androidHead.className = "";
+        eyeContainer.className = "";
+        searchBarWrapper.className += " shake";
+        androidArms[0].className += " flight";
+        androidArms[1].className += " flight";
+        android.className = "step-2";
+        smokeOne.style.display = "block";
+        smokeTwo.style.display = "block";
+        android.className += " to-phone";
+        androidContainer.className += " step-2";
+      }
+
+      if (e.animationName == "to-phone") {
+        androidContainer.className = "";
+        searchBarWrapper.className = "";
+        android.className = "";
+        phone.className += " phone-phone-home";
+        android.className += " droid-phone-home";
+        brandLogo.className += " shrink";
+        androidArms[1].className += " land";
+      }
+
+      if (e.animationName == "droid-phone-home") {
+        android.className = "droid-move-behind-phone";
+        androidLegs[0].className += " step";
+        androidLegs[1].className += " step";
+      }
+
+    }, false);
+
+    android.addEventListener("mouseover", function(e){
+      if(!initialAndroidMouseoverEventHasBeenFired){
+        initialAndroidMouseoverEventHasBeenFired = true;
+        android.style.webkitAnimation = "";
+        android.className = "begin-animation";
+        console.log(e.target);
+        console.log(e.currentTarget);
+      }
+    }, false);
+
+  }, 0);
+//]]>
+</script>
+
+</div>
