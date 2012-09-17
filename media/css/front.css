@@ -1,7 +1,7 @@
 html {
-  background: #454545;
+  background: #454545 url(../img/bg.png) no-repeat center top;
   margin: 0;
-  padding: 0;
+  padding: 119px 0 0;
 }
 
 body {
