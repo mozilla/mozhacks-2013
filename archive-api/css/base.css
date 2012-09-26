@@ -1,0 +1,23 @@
+#no-archive-api {
+    color: #f00;
+    display: none;
+}
+
+#error {
+    color: #f00;
+    display: none;
+}
+
+#drop-files {
+    height: 80px;
+    border: 1px dashed #000;
+    padding: 10px;
+    text-align: center;
+}
+
+#display-files li {
+    list-style: none;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
