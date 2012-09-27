@@ -62,13 +62,24 @@ function readArchive (file) {
                     fileInfo += '<div><img src="' + imgURL + '" alt=""></div>';
                 }
                 else if (fileType.search(/text/i) != -1) {
-                    var fileReader = new FileReader();
-                    
+                    readTextFile(listItem, currentFile);
                 }
                 listItem.innerHTML = fileInfo;
-                list.appendChild(listItem);
+                list.appendChild(listItem);               
             };            
         }
         displayFiles.appendChild(list);
+    };
+}
+
+function readTextFile (listItem, file) {
+    var fileReader = new FileReader();
+    fileReader.readAsText(file);
+    fileReader.onerror = function () {
+        error.innerHTML = "Error showing text file content";
+        error.style.display = "block";
+    };
+    fileReader.onload = function (evt) {
+        listItem.innerHTML += "<div><strong>Text content:</strong> " + evt.target.result + "</div>";
     };
 }
