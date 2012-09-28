@@ -80,6 +80,6 @@ function readTextFile (listItem, file) {
         error.style.display = "block";
     };
     fileReader.onload = function (evt) {
-        listItem.innerHTML += "<div><strong>Text content:</strong> " + evt.target.result + "</div>";
+        listItem.innerHTML += "<div><strong>Text content:</strong><pre>" + evt.target.result + "</pre></div>";
     };
 }
