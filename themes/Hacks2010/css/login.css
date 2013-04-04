@@ -1,0 +1,33 @@
+html { padding: 0; margin: 0; background: #454545 url("../img/bg.png") center top no-repeat; }
+body.login { padding: 0 0 0; border: 0; margin: 0; min-width: 320px; font: 14px/1.5 Helvetica, Arial, sans-serif; color: #6d7581; background: transparent; }
+
+#login { margin-top: 0; }
+
+h1 a { position: absolute; left: -999em; }
+
+.login #backtoblog { position: absolute; top: 0; left: 0; width: 100%; height: 3em; border: 0; margin: 0; padding: 0; background: rgba(0,0,0,.4); }
+.login #backtoblog a { position: relative; top: .75em; left: 20px; text-decoration: none; text-shadow: none; }
+.login #backtoblog a:hover, .login #backtoblog a:focus, .login #backtoblog a:active { color: #fef8e7 !important; text-decoration: underline; }
+
+#loginform { border-color: #eee; border-radius: 0; box-shadow: 0 2px 3px rgba(0,0,0,.1); }
+
+/* @Links */
+.login #backtoblog a, .login #nav a { color: #fac817 !important; text-decoration: none; text-shadow: none; }
+.login #backtoblog a:hover, .login #backtoblog a:focus, .login #backtoblog a:active,
+.login #nav a:hover, .login #nav a:focus, .login #nav a:active { color: #fef8e7 !important; text-decoration: underline; }
+
+
+/*** @Buttons *********/
+#wp-submit { height: auto; padding: .35em 10px .5em; color: #fff; font: bold .923em/1.2 "Trebuchet MS", sans-serif; text-decoration: none;
+  text-shadow: -1px -1px 0 rgba(0,0,0,.2);
+  border: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+	box-shadow: 0 2px rgba(0,0,0,0.1), inset 0 -3px rgba(0,0,0,0.1);
+	background: #a40106;
+}
+#wp-submit:hover,
+#wp-submit:focus { text-decoration: none; cursor: pointer;
+  background: #de1920;
+}

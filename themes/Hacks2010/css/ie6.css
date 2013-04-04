@@ -1,0 +1,17 @@
+/** Styles for IE6 **/
+
+/* Fix double-margin float bug */
+#content-main, #content-sub { display: inline; }
+
+#content-bar .demohead li.demo { display: inline; width: 240px; margin: 0 20px 0 0; }
+
+.demohead .thumb { left: 0; }
+
+/* IE6 treats height like min-height */
+#content-bar.home #feat-demos .demo { height: 60px; }
+.post-list .demo { height: 80px; }
+#comment-list.av .comment { height: 70px; }
+
+#content-bar.home #feat-articles h2.lead { margin-bottom: auto; }
+
+#content-main .post a:hover img, #content-main .post a:focus img, #content-main .post a:active img { border-color: #e5e5e5; }

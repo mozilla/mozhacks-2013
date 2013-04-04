@@ -1,0 +1,92 @@
+/* Styles for print */
+
+#comment-form, .comments-head a, #logo a, #fm-search, .nav-crumbs, #nav-footer, #nav-legal { display: none; }
+#nav-access, #nav-main, #nav-info, .nav-paging, .pagination, .pages, .edit, .reply, .share, .comment-util { display: none; }
+#content-sub .categories, #content-bar .entry-extra, .lead span { display: none; }
+#content-bar.options { display: none; }
+
+body { width: auto; margin: 0 .5in; font: 14pt/1.7 Georgia, "Times New Roman", Times, serif; color: #000; }
+h1, .page-title { font-size: 170%; }
+h2 { font-size: 150%; }
+h3 { font-size: 125%; }
+h4 { font-size: 115%; }
+h5 { font-size: 105%; }
+h6 { font-size: 100%; }
+
+#logo { font-size: 125%; border-bottom: 3px double #ccc; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0 0 .2em; }
+p, ol, ul, dl, table { margin: 0 0 1.4em; }
+abbr, acronym { border: 0; }
+
+.lead a { color: #000; text-decoration: none; border-bottom: 1px solid #aaa; }
+
+:link, :visited { color: #999; text-decoration: underline; }
+
+#site-info { margin-top: 1em; border-top: 5px solid #ccc; font-size: 75%; color: #666; }
+
+#content-main { width: 70%; float: left; }
+#content-sub { width: 25%; float: right; }
+
+#content { clear: both; }
+#site-info { clear: both; padding-top: 10px; }
+
+#content-bar { border: 1px solid #ccc; padding: 8px; font-size: 90%; overflow: auto; margin-bottom: 1em; }
+#content-bar.single .entry-meta { width: 75%; float: left; }
+#content-bar.single .entry-meta p { margin: 0 20px 5px 0; float: left; }
+
+#content-sub .author { font-size: 75%; border: 1px solid #ccc; padding: 1em; }
+#content-sub .author .photo { float: right; margin: 0 0 .5em 10px; }
+#content-sub .author .vcard { margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #d9d9d9; }
+#content-sub .author .vcard:last-child { padding-bottom: 0; border-bottom: 0; margin-bottom: 10px; }
+
+.post-list { list-style: none; margin: 0 0 1.4em; padding: 0; }
+.post { position: relative; }
+.post-list .post .entry-title { font-size: 125%; }
+.archive .post .entry-title, .search .post .entry-title { font-size: 150%; }
+.post .entry-title a { text-decoration: none; color: #000; }
+.post .entry-posted { margin: 0 0 1.4em; }
+
+.single .post, .archive .post, .search .post { border-bottom: 5px solid #ccc; }
+.post-list .post { border-bottom: 2px solid #ccc; padding: 10px 0; }
+#content-bar .post-list .post { border: 0; }
+
+.archive .entry-meta, .search .entry-meta { display: block; font-size: 85%; }
+
+.alignleft { float: left; margin: 0 25px 10px 0; }
+.alignright { float: right; margin: 0 0 10px 25px; }
+.aligncenter { display: block; margin: 0 auto 1.5em; }
+
+.wp-caption { border: 1px solid #ddd; padding: 3px; }
+.wp-caption img { display: block; margin: 5px auto; }
+.wp-caption-text { font-size: 85%; margin: .2em 8px; }
+
+#comment-list { font-size: 85%; }
+#comment-list, #comment-list li { list-style: none; margin-left: 0; padding-left: 0; }
+#comment-list .comment { padding: 10px 65px 10px 20px; margin-bottom: 20px; border: 1px solid #ccc; }
+#comment-list .entry-content { margin: 0 0 1.4em; }
+#comment-list .children { margin: 0 0 10px; padding: 0; }
+#comment-list .comment .entry-title { font-size: 100%; border-bottom: 1px solid #ccc; }
+#comment-list .comment .entry-title img.photo { position: absolute; right: .5em; }
+#comment-list .comment-meta { font-size: 90%; }
+
+#content-bar.demos { padding-right: 2em; }
+#content-bar.demos .post-list { margin: 10px 10px 0; }
+#content-bar.demos .post-list li.demo { position: relative; padding: 155px 0 0; min-height: 0; width: 220px; float: left; margin-left: 60px; border: 0; }
+#content-bar.demos .post-list li.demo:first-child { margin-left: 0; }
+#content-bar.demos .post-list li.demo .entry-title { position: static; font-size: 1em; }
+#content-bar.demos .post-list li.demo img.thumbnail { border: 5px solid #eee; position: absolute; left: -10px; top: 0; }
+
+.post-list .demo { padding-left: 150px; min-height: 80px; }
+.post-list.complete .demo, .post-list.title .demo { padding-left: 0; min-height: 0; }
+.post-list .demo .entry-title { position: relative; }
+.post-list .thumbnail img { border: 5px solid #e5e5e5; position: absolute; left: -150px; top: 0; }
+
+.post-list .thumb { position: absolute; top: 0; left: -150px; width: 140px; height: 80px; overflow: hidden; display: block; }
+.post-list.thumbnail .thumb { position: absolute; top: 0; left: -5px; width: 240px; height: 140px; }
+.post-list.head .thumb { position: absolute; top: 0; left: -10px; width: 240px; height: 145px; }
+.post-list.home .thumb { left: -90px; width: 82px; height: 50px; }
+
+.post-list .thumb img { margin-left: 0; }
+.post-list.thumbnail .thumb img { margin-left: 5px; }
+.post-list.head .thumb img { margin-left: 10px; }
