@@ -162,7 +162,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 
 /*********
- * Set up custom roles and capabilities
+ * Set up custom roles and capabilities when the theme is activated.
  */
 function mozhacks_custom_roles() {
   // Guest Authors.
@@ -172,7 +172,6 @@ function mozhacks_custom_roles() {
     'edit_posts' => true,
     'unfiltered_html' => true,
     'upload_files' => true,
-    'publish_posts' => true,
     'edit_published_posts' =>  true,
     'delete_posts' => true,
     'read_private_posts' => true,
@@ -180,21 +179,25 @@ function mozhacks_custom_roles() {
     'delete_private_posts' => true,
     'moderate_comments' => true
   );
+  remove_role('guest_author'); // remove first to reset, then add again
   add_role( 'guest_author', 'Guest Author', $guestcando );
   
   // Reviewers.
-  // Can read private posts, but can't do much else.
+  // Can edit other's posts, including unfiltered HTML, but can't publish.
   $reviewcando = array(
     'read' =>  true,
-    'read_private_posts' => true
+    'read_private_posts' => true,
+    'edit_posts' => true,
+    'edit_others_posts' => true,
+    'unfiltered_html' => true
   );
+  remove_role('reviewer'); // remove first to reset, then add again
   add_role( 'reviewer', 'Reviewer', $reviewcando );
   
   // Allow Authors to read private posts and post unfiltered HTML.
   // Be sure Authors know what they're doing!
   $author = get_role('author');
   $author->add_cap('unfiltered_html');
-  $author->add_cap('read_private_posts');
   
   // Allow Editors to post unfiltered HTML.
   // Be sure Editors know what they're doing!
