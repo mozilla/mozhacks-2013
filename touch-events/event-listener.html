@@ -111,15 +111,19 @@
 			var b = document.getElementsByTagName('button')[0];
 			var o = document.getElementsByTagName('output')[0],
 			report = function(e) {
+				/* Hack - would normally use e.timeStamp but it's whack in Fx/Android
+				   As a result, the timings will be slightly inflated due to processing*/
+				var now = new Date().getTime();
+				var delta = now-t;
 				o.innerHTML += e.type;
 				if (t>0) {
-					if ((e.timeStamp-t)>150) {
-						o.innerHTML += ' (<strong>' + (e.timeStamp-t) + 'ms</strong>)';
+					if ((now-t)>150) {
+						o.innerHTML += ' (<strong>' + (delta) + 'ms</strong>)';
 					} else {
-						o.innerHTML += ' (' + (e.timeStamp-t) + 'ms)';
+						o.innerHTML += ' (' + (delta) + 'ms)';
 					}
 				}
-				t=e.timeStamp;
+				t=now;
 				o.innerHTML += '<br>';
 				if (e.type == 'click') {
 					t=0;
