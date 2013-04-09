@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width">
     <title>Event listener with touch-action:none</title>
     <link rel="stylesheet" type="text/css" href="../media/css/front.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css">
     <style>
+    	/* override front.css body width */
+		body { width: auto; }
+
 		code {
 			margin: 0 2px;
 			padding: 0px 5px;
@@ -30,7 +32,7 @@
 		}
 
 		button {
-
+			/* Pointer Event default suppression */
 			-ms-touch-action: none;
 			    touch-action: none;
 
