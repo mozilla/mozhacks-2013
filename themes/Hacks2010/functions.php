@@ -189,12 +189,13 @@ function mozhacks_custom_roles() {
     'read_private_posts' => true,
     'edit_posts' => true,
     'edit_others_posts' => true,
+    'moderate_comments' => true,
     'unfiltered_html' => true
   );
   remove_role('reviewer'); // remove first to reset, then add again
   add_role( 'reviewer', 'Reviewer', $reviewcando );
   
-  // Allow Authors to read private posts and post unfiltered HTML.
+  // Allow Authors to post unfiltered HTML.
   // Be sure Authors know what they're doing!
   $author = get_role('author');
   $author->add_cap('unfiltered_html');
@@ -204,9 +205,9 @@ function mozhacks_custom_roles() {
   $editor = get_role('editor');
   $editor->add_cap('unfiltered_html');
   
-  // Allow Contributors to view private posts and moderate comments (only on their own posts)
+  // Allow Contributors to post unfiltered HTML and moderate comments (only on their own posts)
   $contributor = get_role('contributor');
-  $contributor->add_cap(array('read_private_posts','moderate_comments'));
+  $contributor->add_cap(array('moderate_comments','unfiltered_html'));
 }
 add_action( 'admin_init', 'mozhacks_custom_roles');
 
@@ -297,6 +298,27 @@ function is_comments_paged_url() {
   if ($pos === false) { return false; }
   else { return true; }
 }
+
+/*********
+* Catch spambots with a honeypot field in the comment form.
+* It's hidden from view with CSS so most humans will leave it blank, but robots will kindly fill it in to alert us to their presence.
+* The field has an innucuous name -- 'age' in this case -- likely to be autofilled by a robot.
+*/
+function fc_honeypot( array $data ){
+  if( !isset($_POST['comment'])) { die("No Direct Access"); }  // Make sure the form has actually been submitted
+
+  if($_POST['age']) {  // If the Honeypot field has been filled in
+    $message = _e('Sorry, you appear to be a spamming robot because you filled in the hidden spam trap field. To show you are not a spammer, submit your comment again and leave the field blank.', 'mozhacks');
+    $title = 'Spam Prevention';
+    $args = array('response' => 200);
+    wp_die( $message, $title, $args );
+    exit(0);
+  } else {
+	   return $data;
+	}
+}
+add_filter('preprocess_comment','fc_honeypot');
+
 
 /*********
 * Comment Template for Mozilla Hacks theme

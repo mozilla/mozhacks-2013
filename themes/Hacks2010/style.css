@@ -421,6 +421,8 @@ ul.nav-crumbs li:after { content: "\00A0\00BB\00A0"; font-size: 1.2em; line-heig
 #comment-form #errors p { margin-bottom: .5em; }
 #comment-form .err { background: #ffe6dc; }
 
+#comment-form #cmt-ackbar { position: absolute; left: -999em; }
+
 /* =Footer *********/
 #site-info { width: 708px; margin: 0 auto; overflow: hidden; background: #000 url("img/mozilla.png") 3em 2em no-repeat; color: #666; padding: 1.66em 20px 1.66em 140px; font-size: 1.2em; }
 #site-info :link, #site-info :visited { color: #ba9010; }
