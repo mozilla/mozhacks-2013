@@ -943,4 +943,37 @@ function tmh_unique_posts_in_category($cat_id) {
   return $posts;
 }
 
+/*********
+* Adds "Twitter" and "Facebook" fields to the user profile form
+*/
+function additional_contactmethods($user_contactmethods) {
+  $user_contactmethods['twitter'] = 'Twitter Username';
+  $user_contactmethods['facebook'] = 'Facebook URL';
+  return $user_contactmethods;
+}
+add_filter('user_contactmethods', 'additional_contactmethods');
+
+/*********
+* Shows Facebook, Twitter, and Website links for authors
+*/
+function dw_get_author_meta() {
+  $twitterHandle = get_the_author_meta('twitter');
+  $facebookURL = get_the_author_meta('facebook');
+  $website = get_the_author_meta('url');
+
+  if($website || $facebookURL || $twitterHandle):
+    echo '<ul>';
+    if($website):
+      echo '<li><a href="', $website, '" class="website" rel="me">', str_replace('http://', '', $website), '</a></li>';
+    endif;
+    if($twitterHandle):
+      echo '<li><a href="http://twitter.com/', $twitterHandle, '" class="twitter" rel="me">@', $twitterHandle, '</a></li>';
+    endif;
+    if($facebookURL):
+      echo '<li><a href="', $facebookURL, '" class="facebook" rel="me">Facebook</a></li>';
+    endif;
+    echo '</ul>';
+  endif;
+}
+
 ?>
