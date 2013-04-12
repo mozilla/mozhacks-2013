@@ -401,6 +401,8 @@ ul.nav-crumbs li:after { content: "\00A0\00BB\00A0"; font-size: 1.2em; line-heig
 #comment-list ol.children { margin: 10px 0 5px; }
 #comment-list.av ol.children { margin-left: -70px; }
 
+.comments-closed { font-size: 1.2em; font-weight: bold; margin: 20px 0; padding: 10px; background: #f2f2f2; border: 1px solid #d9d9d9; }
+
 /* =Comment =Form *********/
 #respond { background: #fef8e7; border: 1px solid #e4decf; width: 100%; font-size: 1.3em; }
 #comment-list #respond { background: #fef8e7 url("img/reply-arr.png") 5px 5px no-repeat; margin-bottom: 10px; }

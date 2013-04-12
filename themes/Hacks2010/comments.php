@@ -17,7 +17,11 @@
   <div id="comment-stream">
     <header class="comments-head">
       <h3><?php comments_number('No comments yet', 'One comment', '% comments' );?></h3>
-      <?php if (comments_open()) { ?><a href="#respond">Post a comment</a><?php } ?>
+      <?php if (comments_open()) : ?>
+        <p class="open"><a href="#respond">Post a comment</a></p>
+      <?php else : ?>
+        <p class="closed"><strong>Comments are now closed.</strong></p>
+      <?php endif; ?>
     </header>
 
   <?php if ( have_comments() ) : // If there are comments ?>
@@ -72,8 +76,12 @@
     <?php endif; // end if reg required and not logged in ?>
   </div><?php // end #respond ?>
 </section><?php // end #comments ?>
-
 <script>jQuery("#comment-form").submit(function() { return fc_checkform(<?php if ($req) : echo "'req'"; endif; ?>); });</script>
+
+<?php else : // else comments are closed ?>
+
+<p class="comments-closed">Comments are closed for this article.</p>
+
 <?php endif; // end if comments open ?>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
