@@ -216,12 +216,14 @@ p.more { font-size: 1.4em; font-weight: bold; clear: both; margin: 1em 0; paddin
 
 #content-sub .author .vcard a.twitter,
 #content-sub .author .vcard a.facebook,
-#content-sub .author .vcard a.website {
+#content-sub .author .vcard a.website,
+#content-sub .author .vcard a.gplus {
 	padding: 1px 0 0 20px; display: inline-block; color: #000; min-height: 18px;
 }
 #content-sub .author .vcard a.twitter { background: url(img/icn-twitter.gif) 0 0 no-repeat;  }
 #content-sub .author .vcard a.facebook { background: url(img/icn-facebook.gif) 0 0 no-repeat; }
 #content-sub .author .vcard a.website { background: url(img/icn-website.png) 0 0 no-repeat; }
+#content-sub .author .vcard a.gplus { background: url(img/icn-gplus.png) 0 0 no-repeat; }
 
 /*** =Search form *********/
 #fm-search { position: absolute; right: 2em; bottom: 5.3em; }

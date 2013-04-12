@@ -949,6 +949,7 @@ function tmh_unique_posts_in_category($cat_id) {
 function additional_contactmethods($user_contactmethods) {
   $user_contactmethods['twitter'] = 'Twitter Username';
   $user_contactmethods['facebook'] = 'Facebook URL';
+  $user_contactmethods['gplus'] = 'Google+ URL';
   return $user_contactmethods;
 }
 add_filter('user_contactmethods', 'additional_contactmethods');
@@ -956,12 +957,13 @@ add_filter('user_contactmethods', 'additional_contactmethods');
 /*********
 * Shows Facebook, Twitter, and Website links for authors
 */
-function dw_get_author_meta() {
-  $twitterHandle = get_the_author_meta('twitter');
-  $facebookURL = get_the_author_meta('facebook');
-  $website = get_the_author_meta('url');
+function dw_get_author_meta($authorID = null) {
+  $twitterHandle = get_the_author_meta('twitter', $authorID);
+  $facebookURL = get_the_author_meta('facebook', $authorID);
+  $website = get_the_author_meta('url', $authorID);
+  $gplusURL = get_the_author_meta('gplus', $authorID);
 
-  if($website || $facebookURL || $twitterHandle):
+  if($website || $facebookURL || $twitterHandle || $gplusURL):
     echo '<ul>';
     if($website):
       echo '<li><a href="', $website, '" class="website" rel="me">', str_replace('http://', '', $website), '</a></li>';
@@ -971,6 +973,9 @@ function dw_get_author_meta() {
     endif;
     if($facebookURL):
       echo '<li><a href="', $facebookURL, '" class="facebook" rel="me">Facebook</a></li>';
+    endif;
+    if($gplusURL):
+      echo '<li><a href="', $gplusURL, '" class="gplus" rel="me">Google+</a></li>';
     endif;
     echo '</ul>';
   endif;
