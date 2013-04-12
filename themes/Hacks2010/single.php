@@ -106,7 +106,7 @@ $featured_id = get_cat_ID('Featured Article');
     <?php if ($author->description) : ?>
       <p><?php echo $author->description; ?></p>
     <?php endif; ?>
-    <?php dw_get_author_meta(); ?>
+    <?php dw_get_author_meta($author->ID); ?>
       <p><a class="url" href="<?php echo get_author_posts_url($author->ID); ?>">Read more articles by <?php echo $author->display_name; ?>&hellip;</a></p>
     </div>
   <?php endforeach; ?>
