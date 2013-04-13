@@ -204,10 +204,6 @@ function mozhacks_custom_roles() {
   // Be sure Editors know what they're doing!
   $editor = get_role('editor');
   $editor->add_cap('unfiltered_html');
-  
-  // Allow Contributors to post unfiltered HTML and moderate comments (only on their own posts)
-  $contributor = get_role('contributor');
-  $contributor->add_cap(array('moderate_comments','unfiltered_html'));
 }
 add_action( 'admin_init', 'mozhacks_custom_roles');
 
