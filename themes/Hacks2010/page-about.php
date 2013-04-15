@@ -70,4 +70,9 @@ $featured_id = get_cat_ID('Featured Article');
     </ul>
   </aside><!-- /#content-sub -->
 
+  <!-- Put authors in this section -->
+  <div class="about-authors">
+    <?php echo dw_list_authors(); ?>
+  </div>
+
 <?php get_footer(); ?>
