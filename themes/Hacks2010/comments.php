@@ -63,7 +63,7 @@
           </li>
           <li id="cmt-ackbar">
             <label for="age"><?php _e('Spam robots, please fill in this field. Humans should leave it blank.', 'mozhacks'); ?></label>
-            <input type="text" name="age" id="age" size="4">
+            <input type="text" name="age" id="age" size="4" tabindex="-1">
           </li>
         <?php endif; ?>
           <li id="cmt-cmt"><label for="comment"><?php _e('Your comment', 'mozhacks'); ?></label> <textarea name="comment" id="comment" cols="50" rows="10" required="required" aria-required="true"></textarea></li>
