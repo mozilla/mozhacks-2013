@@ -371,9 +371,9 @@ ul.nav-crumbs li:after { content: "\00A0\00BB\00A0"; font-size: 1.2em; line-heig
 #comments .entry-title { font-size: 1.2em; }
 #comments .entry-title cite { font-style: normal; }
 #comment-list { list-style: none; margin: 0; }
-#comment-list .comment, #comment-list .pingback, #comment-list .trackback { position: relative; padding: 10px 10px 5px; margin-bottom: 10px; }
+#comment-list .comment, #comment-list .pingback, #comment-list .trackback, #comment-list .social-twitter-rt { position: relative; padding: 10px 10px 5px; margin-bottom: 10px; }
 #comment-list .comment .comment { margin-bottom: 0; }
-#comment-list.av .comment { padding-left: 80px; min-height: 70px; }
+#comment-list.av .comment, #comment-list.av .social-twitter-rt { padding-left: 80px; min-height: 70px; }
 #comment-list .odd { background: #f2f2f2; }
 #comment-list .even { background: #e5e5e5; }
 #comment-list .bypostauthor { background: #fefefe; }
