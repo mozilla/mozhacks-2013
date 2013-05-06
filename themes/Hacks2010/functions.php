@@ -940,6 +940,74 @@ function tmh_unique_posts_in_category($cat_id) {
 }
 
 /*********
+* Returns author listing HTML 
+* Only authors who have active posts and a bio are included
+*/
+function dw_list_authors() {
+  global $wpdb;
+
+  $users = get_users(array());
+
+  // Do a custom query to get post counts for everyone
+  // This will save hundreds of queries over "WordPress-style" code
+  $postsByUsersQuery = 'SELECT post_author, COUNT(*) as count, meta_value AS description FROM '.$wpdb->posts.' p, '.$wpdb->usermeta.' um WHERE post_status="publish" AND um.meta_key = "description" AND um.user_id = p.post_author AND meta_value != "" AND post_type = "post" GROUP BY post_author';
+  $postsByUsersResult = $wpdb->get_results($postsByUsersQuery, ARRAY_A);
+  $postsByUsersIndex = array();
+  foreach($postsByUsersResult as $result) {
+    $postsByUsersIndex[$result['post_author']] = array('count'=>$result['count'], 'description'=>$result['description']);
+  }
+
+  // Sort by number of posts
+  foreach($users as $user) {
+    $count = $postsByUsersIndex[$user->ID]['count'];
+    if($count == '') { $count = 0; }
+    $user->total_posts = $count;
+    $user->description = $postsByUsersIndex[$user->ID]['description'];
+  }
+  usort($users, 'sort_objects_by_total_posts');
+  $users = array_reverse($users);
+
+  // Prep column output
+  $column1 = $column2 = array();
+  $which = true;
+
+  // Generate output for authors
+  foreach($users as $index=>$user) {
+    if($user->total_posts > 1 && $user->description) {
+      $item = '<li>';
+      if(function_exists('get_avatar')) {
+        $item.= '<a href="'.get_author_posts_url($user->ID).'"><span class="photo">'.get_avatar($user->user_email, 48).'</span></a>';
+      }
+      $item.= '<h4><a href="'.get_author_posts_url($user->ID).'">'.$user->display_name.'</a> - <span>'.$user->total_posts.' post'.($user->total_posts > 1 ? 's' : '').'</span></h4>';
+      $item.= dw_get_author_meta($user->ID);
+      $item.= '<p>'.$user->description.'</p>';
+      $item.= '</li>';
+
+      if($which) {
+        array_push($column1, $item);
+      }
+      else {
+        array_push($column2, $item);
+      }
+      $which = !$which;
+    }
+  }
+  
+  $return = '<ul class="author-list">'.implode('', $column1).'</ul>';
+  $return.= '<ul class="author-list">'.implode('', $column2).'</ul>';
+
+  return $return;
+}
+
+/*********
+* Sorts WordPress users by Object key (total posts)
+*/
+function sort_objects_by_total_posts($a, $b) {
+  if($a->total_posts == $b->total_posts){ return 0 ; }
+  return ($a->total_posts < $b->total_posts) ? -1 : 1;
+}
+
+/*********
 * Adds "Twitter" and "Facebook" fields to the user profile form
 */
 function additional_contactmethods($user_contactmethods) {
@@ -958,23 +1026,26 @@ function dw_get_author_meta($authorID = null) {
   $facebookURL = get_the_author_meta('facebook', $authorID);
   $website = get_the_author_meta('url', $authorID);
   $gplusURL = get_the_author_meta('gplus', $authorID);
+  $return = '';
 
   if($website || $facebookURL || $twitterHandle || $gplusURL):
-    echo '<ul>';
+    $return.= '<ul class="author-meta">';
     if($website):
-      echo '<li><a href="', $website, '" class="website" rel="me">', str_replace('http://', '', $website), '</a></li>';
+      $return.= '<li><a href="'. $website. '" class="website" rel="me">'. str_replace('http://', '', $website). '</a></li>';
     endif;
     if($twitterHandle):
-      echo '<li><a href="http://twitter.com/', $twitterHandle, '" class="twitter" rel="me">@', $twitterHandle, '</a></li>';
+      $return.= '<li><a href="http://twitter.com/'. $twitterHandle. '" class="twitter" rel="me">@'. $twitterHandle. '</a></li>';
     endif;
     if($facebookURL):
-      echo '<li><a href="', $facebookURL, '" class="facebook" rel="me">Facebook</a></li>';
+      $return.= '<li><a href="'. $facebookURL. '" class="facebook" rel="me">Facebook</a></li>';
     endif;
     if($gplusURL):
-      echo '<li><a href="', $gplusURL, '" class="gplus" rel="me">Google+</a></li>';
+      $return.= '<li><a href="'. $gplusURL. '" class="gplus" rel="me">Google+</a></li>';
     endif;
-    echo '</ul>';
+    $return.= '</ul>';
   endif;
+
+  return $return;
 }
 
 ?>
