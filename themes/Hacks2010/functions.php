@@ -974,13 +974,14 @@ function dw_list_authors() {
   // Generate output for authors
   foreach($users as $index=>$user) {
     if($user->total_posts > 1 && $user->description) {
-      $item = '<li>';
-      if(function_exists('get_avatar')) {
-        $item.= '<a href="'.get_author_posts_url($user->ID).'"><span class="photo">'.get_avatar($user->user_email, 48).'</span></a>';
+      $item = '<li class="vcard">';
+      $item.= '<h3><a class="url" href="'.get_author_posts_url($user->ID).'">';
+      if (function_exists('get_avatar')) {
+        $item.= get_avatar($user->user_email, 48);
       }
-      $item.= '<h4><a href="'.get_author_posts_url($user->ID).'">'.$user->display_name.'</a> - <span>'.$user->total_posts.' post'.($user->total_posts > 1 ? 's' : '').'</span></h4>';
+      $item.= '<cite class="fn">'.$user->display_name.'</cite> <span class="post-count">'.$user->total_posts.' post'.($user->total_posts > 1 ? 's' : '').'</span></a></h3>';
+      $item.= '<p class="desc">'.$user->description.'</p>';
       $item.= dw_get_author_meta($user->ID);
-      $item.= '<p>'.$user->description.'</p>';
       $item.= '</li>';
 
       if($which) {
