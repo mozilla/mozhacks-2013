@@ -226,18 +226,23 @@ p.more { font-size: 1.4em; font-weight: bold; clear: both; margin: 1em 0; paddin
 #content-sub .author .vcard a.website, .about-authors .author-meta a.website { background: url(img/icn-website.png) 0 0 no-repeat; }
 #content-sub .author .vcard a.gplus, .about-authors .author-meta a.gplus { background: url(img/icn-gplus.png) 0 0 no-repeat; }
 
-/* =Author *********/
+/* =Authors list *********/
 .about-authors { clear: both; margin: 20px; padding: 20px; font-size: 1.4em; }
 
 .about-authors .author-list { list-style-type: none; margin-left: 0; float: left; width: 48%; margin-right: 3%; }
 .about-authors .author-list:nth-child(even) { margin-right: 0; }
-.about-authors .author-list > li { margin-top: 20px; }
-.about-authors .author-list h4 span { font-style: italic; }
+.about-authors .author-list .vcard { position: relative; padding-left: 70px; margin-bottom: 1em; }
+.about-authors .author-list .fn { font-style: normal; }
+.about-authors .author-list .post-count { font-size: .857em; font-weight: normal; color: #333; }
+.about-authors .author-list .desc { font-size: .857em; margin: 0 0 .5em; }
 
 .about-authors .author-meta { margin: 0; }
 .about-authors .author-meta li { display: inline-block; margin-right: 6px; }
 .about-authors .author-meta a { display: block; width: 16px; height: 16px; overflow: hidden; text-indent: -999em; }
-.about-authors .photo { float: left; margin: 0 4px 0 0; }
+
+.about-authors .photo { position: absolute; left: 0; top: 0; background: #d9d9d9; background: rgba(0,0,0,0.1); padding: 5px; }
+.about-authors a:hover .photo, .about-authors a:focus .photo, .about-authors a:active .photo { background-color: #fac817; }
+
 
 /*** =Search form *********/
 #fm-search { position: absolute; right: 2em; bottom: 5.3em; }
