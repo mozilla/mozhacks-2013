@@ -36,7 +36,7 @@
 }
 .socialshare > div > a {
   position: relative;
-  background: url('../img/icn-share.png') 0 1px no-repeat transparent;
+  background: url('../img/icn-share.png') 0 4px no-repeat transparent;
   text-decoration: none;
   margin: 0;
   padding: 0 28px 0 16px;
@@ -44,7 +44,7 @@
 .socialshare > div > a:after {
   content: "";
   position: absolute;
-  top: -5px;
+  top: -2px;
   right: 0;
   display: block;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -66,7 +66,7 @@
 .socialshare > div > a:hover,
 .socialshare > div > a:focus {
   outline: none;
-  background-position: 0 -24px;
+  background-position: 0 -21px;
 }
 .socialshare > div > a:focus span {
   outline: 1px dotted;
@@ -96,7 +96,7 @@
 }
 .socialshare.open > div > a {
   outline: none;
-  background-position: 0 -24px;
+  background-position: 0 -21px;
 }
 .socialshare.open > div > a:after {
   width: 21px;
