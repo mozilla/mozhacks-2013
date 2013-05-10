@@ -719,16 +719,6 @@ function tmh_parse_query($wp) {
   $key = array_search($view_as, tmh_article_to_demo_mappings());
   $view_as = ($key === FALSE) ? $view_as : $key;
 
-  # user asked for a view change, store this for them
-  if (isset($query_vars['tmh_view_as'])) {
-    setcookie(
-      'tmh_view_as_'.COOKIEHASH,
-      $view_as,
-      strtotime('+1 year'),
-      COOKIEPATH,
-      COOKIE_DOMAIN
-    );
-  }
   $query_vars['tmh_view_as'] = $view_as;
 }
 add_action('parse_query', 'tmh_parse_query');
