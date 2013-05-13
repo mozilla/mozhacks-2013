@@ -64,6 +64,9 @@ $featured_id = get_cat_ID('Featured Article');
       <p>Posted by <?php if (function_exists(coauthors_posts_links)) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?> 
       on <time datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_time(get_option('date_format')); ?></time> 
       at <time datetime="<?php the_time('TH:i:sP'); ?>"><?php the_time(get_option('time_format')); ?></time></p>
+    <?php if ( get_option('mozhacks_share_posts') ) : ?>
+      <div class="share"><div class="socialshare" data-type="small-bubbles"></div></div>
+    <?php endif; ?>
     </footer>
   </article>
 
