@@ -964,7 +964,7 @@ function dw_list_authors() {
   // Generate output for authors
   foreach($users as $index=>$user) {
     if($user->total_posts > 1 && $user->description) {
-      $item = '<li class="vcard">';
+      $item = '<li class="vcard" id="author-'.$user->user_login.'">';
       $item.= '<h3><a class="url" href="'.get_author_posts_url($user->ID).'">';
       if (function_exists('get_avatar')) {
         $item.= get_avatar($user->user_email, 48);
