@@ -1,10 +1,10 @@
 /*
-Theme Name: Mozilla Hacks, 2010
-Theme URI: http://hacks.mozilla.org/
-Description: Theme for Mozilla Hacks. Design by <a href="http://www.howsehold.org">Chris Howse</a>. Code by <a href="http://www.focalcurve.com">Craig Cook</a> and <a href="http://themattharris.com">Matt Harris</a>.
-Version: 1.2
-Author: Craig Cook
-Author URI: http://github.com/craigcook
+Theme Name: Mozilla Hacks, 2013
+Theme URI: https://hacks.mozilla.org/
+Description: Theme for Mozilla Hacks. Design by <a href="http://www.howsehold.org">Chris Howse</a>. Code by <a href="http://www.focalcurve.com">Craig Cook</a>, <a href="http://themattharris.com">Matt Harris</a>, and the MDN team.
+Version: 1.3
+Author: MDN team
+Author URI: https://github.com/mozilla/mozhacks/
 
 Created November 30, 2009
 
@@ -126,7 +126,7 @@ h2.lead:after,
 #content-bar.single p.entry-cat a:hover, #content-bar.single p.entry-cat a:focus, #content-bar.single p.entry-cat a:active { background: #a40106; }
 
 #content-bar.single .entry-extra { line-height: 1.6; list-style: none; margin: 0; width: 26em; float: right; }
-#content-bar.single .entry-extra li { float: left; margin: 0 0 0 1.66em; }
+#content-bar.single .entry-extra .comments, #content-bar.single .entry-extra .share { float: left; margin: 0 0 0 1.66em; }
 #content-bar.single .entry-extra .comments a, #content-bar.single .entry-extra .comments em { font-style: normal; padding: 1px 0 5px 22px; background: url("img/icn-comments.png") no-repeat 0 0; }
 
 #content-bar.single .entry-extra .socialshare { float: left; position: relative; font: 100% inherit; }
