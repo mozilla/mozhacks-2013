@@ -71,7 +71,7 @@
 .socialshare > div > a:focus span {
   outline: 1px dotted;
 }
-.socialshare #share-options {
+.socialshare .share-options {
   display: none;
   position: absolute;
   background: #fff;
@@ -82,14 +82,15 @@
   -moz-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
-.socialshare #share-options ul {
+.socialshare .share-options ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.socialshare #share-options ul li {
-  margin: 0;
+.socialshare .share-options ul li {
+  margin: 0 0 5px;
   padding: 0;
+	position: relative;
 }
 .socialshare > div > a {
   color: #484848;
@@ -109,43 +110,27 @@
   background-color: rgba(74, 74, 74, 0.1);
   background-position: 5px -68px;
 }
-.socialshare.open #share-options {
+.socialshare.open .share-options {
   display: block;
+	left: auto;
   margin-top: 7px;
 }
-.socialshare.open[data-type="bubbles"] #share-options {
-  width: 178px;
-  height: 68px;
-  padding: 12px 12px 6.5px 12px;
-  margin-left: 7px;
-}
-.socialshare.open[data-type="bubbles"] #share-options ul li {
-  float: left;
-}
-.socialshare.open[data-type="bubbles"] #share-options ul li:nth-child(1) {
-  width: 48px;
-}
-.socialshare.open[data-type="bubbles"] #share-options ul li:nth-child(2) {
-  margin-top: 2px;
-}
-.socialshare.open[data-type="bubbles"] #share-options ul li:nth-child(-n+2) {
-  padding-right: 12px;
-}
-.socialshare.open[data-type="small-bubbles"] #share-options {
+
+.socialshare.open[data-type="small-bubbles"] .share-options {
   padding: 12px 6px 6.5px 12px;
-  height: 92px;
-  width: 80px;
-  margin-left: 54px;
+  height: 85px;
+  width: 90px;
+  margin-left: 0;
 }
-.socialshare.open[data-type="small-bubbles"] #share-options ul li:nth-child(1) {
-  margin-top: -4px;
-}
-.socialshare.open[data-type="small-bubbles"] #share-options ul li:nth-child(2) {
-  height: 24px;
-}
-.socialshare.open[data-type="small-bubbles"] #share-options ul li:nth-child(-n+2) {
-  padding-bottom: 12px;
-}
+
 .FB_UI_Hidden {
   display: none;
+}
+
+.fb_iframe_widget {
+	height: 20px;
+}
+.fb_iframe_widget > span {
+	position: absolute !important;
+	top: 0;
 }
