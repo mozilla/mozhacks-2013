@@ -71,7 +71,7 @@ $featured_id = get_cat_ID('Featured Article');
   </aside><!-- /#content-sub -->
 
   <!-- Put authors in this section -->
-  <div class="about-authors">
+  <div id="authors" class="about-authors">
     <?php echo dw_list_authors(); ?>
   </div>
 
