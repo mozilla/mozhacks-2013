@@ -1,0 +1,12 @@
+SRC_DIR = '/data/genericrhel6-stage/src/hacks.allizom.org/wp-content-git'
+WWW_DIR = '/data/genericrhel6-stage/www/hacks.allizom.org/wp-content-git'
+
+DEPLOY_SCRIPT = "/data/genericrhel6-stage/deploy -n hacks.allizom.org"
+REMOTE_UPDATE_SCRIPT = "/data/bin/update-www.sh hacks.allizom.org"
+
+WEB_HOSTGROUP = 'genericrhel6-stage'
+
+UPDATE_REF = 'origin/master'
+SSH_KEY = None
+
+REMOTE_HOSTNAME = 'hacks.allizom.org'
