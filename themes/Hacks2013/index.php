@@ -1,6 +1,6 @@
 <?php 
 // Don't allow direct access to the theme
-if(!function_exists('get_header')) {
+if(!defined('DB_NAME')) {
   exit('Direct template access is not allowed');
 }
 
