@@ -18,7 +18,7 @@ import commander_settings as settings
 @task
 def update_code(ctx, tag):
     """Update the code to a specific git reference (tag/sha/etc)."""
-    with ctx.lcd(os.path.join(settings.SRC_DIR, 'wp-content-git')):
+    with ctx.lcd(settings.SRC_DIR):
         ctx.local('git fetch origin')
         ctx.local("git checkout -f %s" % tag)
         ctx.local("find . -type f -name '.gitignore' -or -name '*.pyc' -delete")
