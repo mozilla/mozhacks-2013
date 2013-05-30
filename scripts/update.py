@@ -39,6 +39,13 @@ def deploy_app(ctx):
 def pre_update(ctx, ref=settings.UPDATE_REF):
     """Update code to pick up changes to this file."""
     update_code(ref)
+    update_info()
+
+
+@task
+def update_info(ctx):
+    with ctx.lcd(settings.SRC_DIR):
+        ctx.local("date > last_deploy.txt")
 
 
 @task
