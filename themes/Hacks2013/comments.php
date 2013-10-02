@@ -51,15 +51,15 @@
         <?php else : ?>
           <li id="cmt-name">
             <label for="author"><?php _e('Your name', 'mozhacks'); ?> <?php if ($req) :?><abbr title="<?php _e('(required)', 'onemozilla'); ?>">*</abbr><?php endif; ?></label>
-            <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="25" <?php if ($req) echo "required aria-required='true'"; ?>>
+            <input type="text" name="author" id="author" size="25" <?php if ($req) echo "required aria-required='true'"; ?>>
           </li>
           <li id="cmt-email">
             <label for="email"><?php _e('Your e-mail', 'mozhacks'); ?> <?php if ($req) :?><abbr title="<?php _e('(required)', 'onemozilla'); ?>">*</abbr><?php endif; ?></label>
-            <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="25" <?php if ($req) echo "required aria-required='true'"; ?>>
+            <input type="email" name="email" id="email" size="25" <?php if ($req) echo "required aria-required='true'"; ?>>
           </li>
           <li id="cmt-web">
             <label for="url"><?php _e('Your website', 'mozhacks'); ?></label>
-            <input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="25">
+            <input type="url" name="url" id="url" size="25">
           </li>
           <li id="cmt-ackbar">
             <label for="age"><?php _e('Spam robots, please fill in this field. Humans should leave it blank.', 'mozhacks'); ?></label>
