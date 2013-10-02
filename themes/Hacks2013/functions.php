@@ -20,6 +20,11 @@ function my_editor_style($url) {
 }
 
 /*********
+* Disable comment cookies
+*/
+remove_action('set_comment_cookies', 'wp_set_comment_cookies');
+
+/*********
  * Register and define the Social Sharing setting
  */
 function mozhacks_admin_init(){
@@ -27,12 +32,12 @@ function mozhacks_admin_init(){
     'reading',
     'mozhacks_share_posts'
   );
-  add_settings_field( 
+  add_settings_field(
     'share_posts',
-    __( 'Social sharing', 'mozhacks' ), 
+    __( 'Social sharing', 'mozhacks' ),
     'mozhacks_settings_field_share_posts',
-    'reading', 
-    'default' 
+    'reading',
+    'default'
   );
 }
 add_action('admin_init', 'mozhacks_admin_init');
@@ -181,7 +186,7 @@ function mozhacks_custom_roles() {
   );
   remove_role('guest_author'); // remove first to reset, then add again
   add_role( 'guest_author', 'Guest Author', $guestcando );
-  
+
   // Reviewers.
   // Can edit other's posts, including unfiltered HTML, but can't publish.
   $reviewcando = array(
@@ -194,12 +199,12 @@ function mozhacks_custom_roles() {
   );
   remove_role('reviewer'); // remove first to reset, then add again
   add_role( 'reviewer', 'Reviewer', $reviewcando );
-  
+
   // Allow Authors to post unfiltered HTML.
   // Be sure Authors know what they're doing!
   $author = get_role('author');
   $author->add_cap('unfiltered_html');
-  
+
   // Allow Editors to post unfiltered HTML.
   // Be sure Editors know what they're doing!
   $editor = get_role('editor');
@@ -219,13 +224,13 @@ function mozhacks_load_scripts() {
   if ( is_singular() && comments_open() && get_option('thread_comments') ) {
     wp_enqueue_script( 'comment-reply' );
   }
-  
+
   // Check required fields on comment form
   wp_register_script( 'checkcomments', get_template_directory_uri() . '/js/fc-checkcomment.js' );
   if ( is_singular() && comments_open() && get_option('require_name_email') ) {
     wp_enqueue_script('checkcomments');
   }
-  
+
   // Register and load the socialsharing script
   wp_register_script( 'socialshare', get_template_directory_uri() . '/js/socialshare.min.js' );
   if ( is_singular() && get_option('mozhacks_share_posts') && !is_page(array('home','about','demos','articles')) ) {
@@ -930,7 +935,7 @@ function tmh_unique_posts_in_category($cat_id) {
 }
 
 /*********
-* Returns author listing HTML 
+* Returns author listing HTML
 * Only authors who have active posts and a bio are included
 */
 function dw_list_authors() {
@@ -983,7 +988,7 @@ function dw_list_authors() {
       $which = !$which;
     }
   }
-  
+
   $return = '<ul class="author-list">'.implode('', $column1).'</ul>';
   $return.= '<ul class="author-list">'.implode('', $column2).'</ul>';
 
