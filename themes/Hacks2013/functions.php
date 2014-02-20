@@ -236,6 +236,13 @@ function mozhacks_load_scripts() {
   if ( is_singular() && get_option('mozhacks_share_posts') && !is_page(array('home','about','demos','articles')) ) {
     wp_enqueue_script( 'socialshare' );
   }
+
+  // Register and load socialshare tracking script with jquery & socialshare
+  // dependencies
+  wp_register_script( 'socialtrack', get_template_directory_uri() . '/js/socialtrack.js', array('jquery', 'socialshare'));
+  if ( is_singular() && get_option('mozhacks_share_posts') && !is_page(array('home','about','demos','articles')) ) {
+    wp_enqueue_script( 'socialtrack', get_template_directory_uri() . '/js/socialtrack.js' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'mozhacks_load_scripts' );
 
