@@ -53,6 +53,7 @@
   <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
   <script type="text/javascript">
+    window.hacks = {};
     // http://cfsimplicity.com/61/removing-analytics-clutter-from-campaign-urls
     var removeUtms  =   function(){
         var l = window.location;
