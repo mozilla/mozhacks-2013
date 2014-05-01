@@ -474,3 +474,26 @@ ul.nav-crumbs li:after { content: "\00A0\00BB\00A0"; font-size: 1.2em; line-heig
 #nav-footer h5 { display: inline; }
 #nav-footer ul { display: inline; list-style: none; }
 #nav-footer li:first-child { border-left: 0; }
+
+/*---Make it Responsive---*/
+@media all and (max-width: 900px){
+	#outer-wrapper{
+		background-size: 120%;
+	}
+	header#branding,footer#site-info,div#content{
+		width: auto;
+	}
+	#home-intro,#home-elsewhere,#content-bar.home #feat-articles,#content-bar.home #feat-demos{
+		width: auto;
+		float: none;
+	}
+	main#content-main{
+		width: auto;
+		float: none;
+	}
+	#content-sub{
+		width: auto;
+		float: none;
+		margin-right: 0px;
+	}
+}
