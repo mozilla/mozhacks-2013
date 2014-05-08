@@ -3,9 +3,9 @@
 <footer id="site-info">
   <nav id="nav-legal">
     <ul>
-      <li><a href="http://www.mozilla.com/privacy-policy.html" rel="external">Privacy Policy</a></li>
-      <li><a href="http://www.mozilla.com/about/legal.html" rel="external">Legal Notices</a></li>
-      <li><a href="http://www.mozilla.com/legal/fraud-report/" rel="external">Report Trademark Abuse</a></li>
+      <li><a href="http://www.mozilla.org/privacy/websites/" rel="external">Privacy Policy</a></li>
+      <li><a href="http://www.mozilla.org/about/legal.html" rel="external">Legal Notices</a></li>
+      <li><a href="http://www.mozilla.org/legal/fraud-report/" rel="external">Report Trademark Abuse</a></li>
     </ul>
   </nav>
 
