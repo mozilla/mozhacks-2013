@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> id="hacks-mozilla-org">
 <head>
-  <meta name="viewport" content="width=1024">
+  <meta name="viewport" content="width=device-width">
   <meta charset="<?php bloginfo( 'charset' ); ?>">
 
   <!-- OpenGraph metadata -->
