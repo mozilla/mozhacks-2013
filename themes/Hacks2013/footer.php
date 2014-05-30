@@ -3,13 +3,13 @@
 <footer id="site-info">
   <nav id="nav-legal">
     <ul>
-      <li><a href="http://www.mozilla.org/privacy/websites/" rel="external">Privacy Policy</a></li>
-      <li><a href="http://www.mozilla.org/about/legal.html" rel="external">Legal Notices</a></li>
-      <li><a href="http://www.mozilla.org/legal/fraud-report/" rel="external">Report Trademark Abuse</a></li>
+      <li><a href="https://www.mozilla.org/privacy/websites/" rel="external">Privacy Policy</a></li>
+      <li><a href="https://www.mozilla.org/about/legal.html" rel="external">Legal Notices</a></li>
+      <li><a href="https://www.mozilla.org/legal/fraud-report/" rel="external">Report Trademark Abuse</a></li>
     </ul>
   </nav>
 
-  <p id="copyright">Except where otherwise noted, content on this site is licensed under the <br /><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
+  <p id="copyright">Except where otherwise noted, content on this site is licensed under the <br /><a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
 
   <nav id="nav-footer">
     <h5>hacks.mozilla.org:</h5>
