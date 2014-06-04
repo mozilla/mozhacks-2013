@@ -14,7 +14,7 @@
   <meta name="MSSmartTagsPreventParsing" content="true">
   <meta http-equiv="imagetoolbar" content="no">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
   <link rel="shortcut icon" type="image/ico" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico">
@@ -70,11 +70,12 @@
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-35433268-8'],
               ['_setAllowAnchor', true]);
+    _gaq.push (['_gat._anonymizeIp']);
     _gaq.push(['_trackPageview']);
     _gaq.push( removeUtms );
     (function(d, k) {
       var ga = d.createElement(k); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == d.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      ga.src = 'https://ssl.google-analytics.com/ga.js';
       var s = d.getElementsByTagName(k)[0]; s.parentNode.insertBefore(ga, s);
     })(document, 'script');
   </script>
@@ -105,7 +106,7 @@
         <li <?php if ( is_page('about') ) {?>class="selected"<?php } ?>><a href="<?php echo get_permalink(get_page_by_path('about')->ID); ?>">About</a></li>
       </ul>
     </nav>
-    <a href="http://www.mozilla.org/" id="tabzilla">Mozilla</a>
+    <a href="https://www.mozilla.org/" id="tabzilla">Mozilla</a>
   </header><!-- /#branding -->
 
   <div id="content">
