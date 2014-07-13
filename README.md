@@ -4,4 +4,6 @@ Mozilla Hacks is one of Mozilla’s most important channels for developer outrea
 
 Mozilla Hacks is, just like [MDN (Mozilla Developer Network)](https://developer.mozilla.org/), a web browser agnostic resource, focused on the Open Web and sharing knowledge with all web developers out there.
 
+More in-depth information can be found in the [wiki page for Mozilla Hacks](https://wiki.mozilla.org/Engagement/Developer_Engagement/Hacks_blog).
+
 [hacks.mozilla.org](https://hacks.mozilla.org/)
