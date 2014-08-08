@@ -106,7 +106,7 @@
         <li <?php if ( is_page('about') ) {?>class="selected"<?php } ?>><a href="<?php echo get_permalink(get_page_by_path('about')->ID); ?>">About</a></li>
       </ul>
     </nav>
-    <a href="https://www.mozilla.org/" id="tabzilla">Mozilla</a>
+    <a href="#" id="tabzilla">Mozilla</a>
   </header><!-- /#branding -->
 
   <div id="content">
