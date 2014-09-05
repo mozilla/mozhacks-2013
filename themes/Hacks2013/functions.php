@@ -535,11 +535,12 @@ function tmh_page_order_query_vars($vars) {
 */
 function tmh_flush_rules() {
   global $wp_rewrite;
-  $wp_rewrite->flush_rules();
+  $wp_rewrite->flush_rules(false);
 }
 add_filter('rewrite_rules_array','tmh_page_order_rewrite_rules');
 add_filter('query_vars','tmh_page_order_query_vars');
-add_filter('init','tmh_flush_rules');
+add_action('after_switch_theme', 'tmh_flush_rules');
+
 
 /*********
 * Returns the modified list of fields to return for the get posts query
