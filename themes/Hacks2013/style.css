@@ -119,7 +119,7 @@ h2.lead:after,
 #content-bar.single { padding: .85em 2em .8em 4em; }
 #content-bar.single .entry-posted, #content-bar.single .entry-cat { font-size: 1.2em; margin-bottom: 2px; float: left; }
 #content-bar.single li { display: inline; font-size: 1.2em; margin: 0; }
-#content-bar.single .entry-meta { width: 50em; float: left; line-height: 1.6; }
+#content-bar.single .entry-meta { float: left; line-height: 1.6; }
 #content-bar.single .entry-meta abbr { color: #000; }
 #content-bar.single p.entry-posted { margin-right: 2em; }
 #content-bar.single p.entry-cat a { display: inline-block; background: #d0796b; background: rgba(164, 1, 6, .5); color: #fff; padding: 0 4px; margin: 0 0 2px 4px; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
@@ -276,7 +276,7 @@ p.more { font-size: 1.4em; font-weight: bold; clear: both; margin: 1em 0; paddin
 #nav-main .selected a:hover, #nav-main .selected a:focus, #nav-main .selected a:active { text-decoration: underline; }
 
 /* =Breadcrumbs *********/
-ul.nav-crumbs { font-size: 1.2em; width: 42em; float: left; clear: both; margin-bottom: 1em; }
+ul.nav-crumbs { font-size: 1.2em; float: left; clear: both; margin-bottom: 1em; }
 ul.nav-crumbs li { display: inline; }
 ul.nav-crumbs li:after { content: "\00A0\00BB\00A0"; font-size: 1.2em; line-height: 1; } /* nbsp raquo nbsp */
 
@@ -476,6 +476,8 @@ ul.nav-crumbs li:after { content: "\00A0\00BB\00A0"; font-size: 1.2em; line-heig
 #nav-footer li:first-child { border-left: 0; }
 
 /*---Make it Responsive---*/
+img, video, iframe { max-width: 100%; }
+
 @media all and (max-width: 900px){
 	#outer-wrapper{
 		background-size: 120%;
