@@ -482,6 +482,21 @@ img, video, iframe { max-width: 100%; }
 	#outer-wrapper{
 		background-size: 120%;
 	}
+	header#branding {
+		padding-left: 0;
+	}
+	#content-head .nav-paging, #content-head .nav-crumbs {
+		width: auto;
+		position: relative;
+		top: auto;
+		right: auto;
+	}
+	#content-head .nav-paging {
+		margin-top: 1em;
+	}
+	#nav-main li {
+		margin-left: 0.25em;
+	}
 	header#branding,footer#site-info,div#content{
 		width: auto;
 	}
