@@ -36,7 +36,7 @@ abbr.updated, abbr.published { border: 0; }
 
 /* =General elements *********/
 html { background: #454545; }
-body { position: relative; color: #fac817; font: 10px/1.4 Helvetica, "Helvetica Neue", Arial, sans-serif; }
+body { position: relative; color: #fac817; font: 10px/1.6 Helvetica, "Helvetica Neue", Arial, sans-serif; }
 #outer-wrapper { background: #454545 url("img/bg.png") center top no-repeat; }
 
 /*** =Links */
@@ -166,7 +166,7 @@ h2.lead:after,
 
 /* =Home page *********/
 #home-intro { width: 50em; float: left; margin-bottom: 2em; }
-#home-intro p { font-size: 2.4em; line-height: 1.2; margin: 0; }
+#home-intro p { font-size: 2.4em; line-height: 1.3; margin: 0; }
 #home-intro strong { color: #de1920; }
 #home-intro a.more { font-size: .75em; }
 

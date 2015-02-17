@@ -9,7 +9,7 @@ ul, ol { list-style: none; }
 a img { border: 0; }
 input, select, textarea, button { font-family: inherit; font-size: 100%; }
 
-html .mceContentBody { color: #333; font: 14px/1.4 Helvetica, "Helvetica Neue", Arial, sans-serif; width: 500px; padding: 20px; }
+html .mceContentBody { color: #333; font: 14px/1.6 Helvetica, "Helvetica Neue", Arial, sans-serif; width: 500px; margin: 20px; }
 
 /*** =Links */
 .mceContentBody a:link,
