@@ -24,7 +24,7 @@ Medium Gray     #e5e5e5
 /* =Reset defaults */
 header, hgroup, nav, section, article, aside, footer, main { display: block; }
 html, body, form, fieldset, legend, h1, h2, h3, h4, h5, h6, dd { margin: 0; padding: 0; }
-p, pre, blockquote, ul, ol, dl, table { margin: 0 0 1.4em; padding: 0; line-height: 1.6em;}
+p, pre, blockquote, ul, ol, dl, table { margin: 0 0 1.4em; padding: 0; line-height: 1.6;}
 blockquote:before, blockquote:after, q:before, q:after { content: ""; }
 blockquote, q { quotes: "" ""; }
 table { border-collapse: collapse; border-spacing: 0; }
@@ -36,7 +36,7 @@ abbr.updated, abbr.published { border: 0; }
 
 /* =General elements *********/
 html { background: #454545; }
-body { position: relative; color: #fac817; font: 10px/1.6 Open Sans, "Helvetica Neue", Arial, sans-serif; }
+body { position: relative; color: #fac817; font: 10px/1.6 "Open Sans", "Helvetica Neue", Arial, sans-serif; }
 #outer-wrapper { background: #454545 url("img/bg.png") center top no-repeat; }
 
 /*** =Links */
@@ -58,7 +58,7 @@ body { position: relative; color: #fac817; font: 10px/1.6 Open Sans, "Helvetica 
 .page .post,
 .fail { font-size: 1.4em; }
 
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 { margin-bottom: 1em; margin-top: 1em;}
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 { margin: 1em 0 .5em;}
 .post ul { margin: 0 0 1.4em 20px; list-style: disc; }
 .post ol { margin: 0 0 1.4em 20px; list-style: decimal; }
 .post li { margin-bottom: .25em; }
