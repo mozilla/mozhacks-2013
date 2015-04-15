@@ -47,10 +47,11 @@ body { position: relative; color: #fac817; font: 10px/1.6 "Open Sans", "Helvetic
 :link:active, :visited:active { color: #a40106; text-decoration: underline; }
 
 /*** =Headings */
-.post h1, .page-title, .single .entry-title { clear: both; font-size: 4em; line-height: 1.2; margin-top: .4em; color: #000; }
-.post h2 { font-size: 2em; line-height: 1.2; color: #000;}
-.post h3 { font-size: 1.5em; line-height: 1.2; color: #000;}
-.post h4 { font-size: 1em; line-height: 1.2; text-transform: uppercase; letter-spacing: .1em; color: #000; }
+.page-title, .single .entry-title { clear: both; font-size: 3.2em; line-height: 1.2; margin-top: .4em; color: #000; }
+.post h1 { font-size: 2.2em; }
+.post h2 { font-size: 1.6em; }
+.post h3 { font-size: 1.4em; }
+.post h4 { font-size: 1.2em; text-transform: uppercase; letter-spacing: .1em; }
 .post h5, .post h6 { font-size: 1.1em; }
 
 /*** =Post =Content */
@@ -58,7 +59,7 @@ body { position: relative; color: #fac817; font: 10px/1.6 "Open Sans", "Helvetic
 .page .post,
 .fail { font-size: 1.4em; }
 
-.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 { margin: 1em 0 .5em;}
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 { line-height: 1.2; color: #000; margin: 1em 0 .5em; }
 .post ul { margin: 0 0 1.4em 20px; list-style: disc; }
 .post ol { margin: 0 0 1.4em 20px; list-style: decimal; }
 .post li { margin-bottom: .25em; }
@@ -71,7 +72,7 @@ body { position: relative; color: #fac817; font: 10px/1.6 "Open Sans", "Helvetic
 .post th, .post td { border-bottom: 1px solid #d4d1c3; padding: 0 4px; }
 .post thead th { font-size: 90%; text-align: left; font-weight: normal; }
 .post tbody th { text-align: left; }
-.post code { font-size: 90%; color: #614644; }
+.post p code { font-size: 90%; color: #614644; }
 
 .gist table { margin: 0; border: 0; }
 

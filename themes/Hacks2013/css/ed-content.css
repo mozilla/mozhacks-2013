@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Bold-webfont.woff') format('woff'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Italic-webfont.woff') format('woff'),
+         url('https://mozorg.cdn.mozilla.net/media/fonts/OpenSans-Italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 /* =Reset defaults */
 html, body, form, fieldset, legend, h1, h2, h3, h4, h5, h6, dd { margin: 0; padding: 0; }
 p, pre, blockquote, ul, ol, dl, table { margin: 0 0 1.4em; padding: 0; }
@@ -9,7 +33,7 @@ ul, ol { list-style: none; }
 a img { border: 0; }
 input, select, textarea, button { font-family: inherit; font-size: 100%; }
 
-html .mceContentBody { color: #333; font: 14px/1.6 Helvetica, "Helvetica Neue", Arial, sans-serif; width: 500px; margin: 20px; }
+html .mceContentBody { color: #333; font: 14px/1.6 "Open Sans", "Helvetica Neue", Arial, sans-serif; width: 500px; margin: 20px; }
 
 /*** =Links */
 .mceContentBody a:link,
@@ -19,10 +43,11 @@ html .mceContentBody { color: #333; font: 14px/1.6 Helvetica, "Helvetica Neue", 
 .mceContentBody a:active,{ color: #a40106; text-decoration: underline; }
 
 /*** =Headings */
-h1 { clear: both; font-size: 2.4em; line-height: 1.2; margin-top: .4em; color: #000; }
-h2 { font-size: 1.5em; line-height: 1.2; color: #000; }
-h3 { font-size: 1.25em; line-height: 1.2; color: #000; }
-h4 { font-size: 1em; line-height: 1.2; text-transform: uppercase; letter-spacing: .1em; color: #000; }
+.post h1, h2, h3, h4, h5, h6 { line-height: 1.2; color: #000; margin: 1em 0 .5em; }
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.2em; text-transform: uppercase; letter-spacing: .1em; }
 h5, h6 { font-size: 1.1em; }
 
 ul { margin: 0 0 1.4em 20px; list-style: disc; }
@@ -37,7 +62,7 @@ table caption { font-size: 1em; }
 th, td { border-bottom: 1px solid #d4d1c3; padding: 0 4px; }
 thead th { font-size: 90%; text-align: left; font-weight: normal; }
 tbody th { text-align: left; }
-code { font-size: 90%; color: #614644; }
+p code { font-size: 90%; color: #614644; }
 
 /** =Images *********/
 .mceContentBody a img { border: 5px solid #e5e5e5; }
