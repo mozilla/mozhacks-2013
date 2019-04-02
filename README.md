@@ -1,3 +1,5 @@
+**Note:** *This theme was active on [hacks.mozilla.org](https://hacks.mozilla.org/) from 2013 to 2015. The next theme is at https://github.com/potch/hax.*
+
 # Mozilla Hacks
 
 Mozilla Hacks is one of Mozilla’s most important channels for developer outreach and engagement. We want it to be one of the key resources for people developing for the Open Web, talking about both news and in-depth descriptions of technologies and features. We will cover both development tips and tricks in general, but also look at features in Mozilla’s products from a technical perspective – to show our approach and line of thinking, and hopefully inspire other companies to implement what we have.
